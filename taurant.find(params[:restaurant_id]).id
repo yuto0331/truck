@@ -1,0 +1,11 @@
+
+[1mFrom:[0m /home/ubuntu/workspace/truck/app/controllers/comments_controller.rb @ line 7 CommentsController#index:
+
+     [1;34m6[0m: [32mdef[0m [1;34mindex[0m
+ =>  [1;34m7[0m:       binding.pry
+     [1;34m8[0m:   @current_restaurant_id = [1;34;4mRestaurant[0m.find(params[[33m:restaurant_id[0m]).id
+     [1;34m9[0m:   @comments = [1;34;4mComment[0m.all
+    [1;34m10[0m:   [1;34m#@comments.restaurant_id = Restaurant.find_by(params[:restaurant_id]).id[0m
+    [1;34m11[0m:   [1;34m#@comment.restaurant_id = Restaurant.find_by(params[:restaurant_id]).id #ココには不要、上段で入っている[0m
+    [1;34m12[0m: [32mend[0m
+

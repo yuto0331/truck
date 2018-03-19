@@ -1,0 +1,50 @@
+
+<%= form_with(model: comment, local: true) do |form| %>
+  <% if comment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(comment.errors.count, "error") %> prohibited this comment from being saved:</h2>
+
+      <ul>
+      <% comment.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  
+  <div class="field">
+    <%= form.label :restaurant_id %>
+    <%= form.hidden_field :restaurant_id, :value => @current_restaurant_id %>
+
+    <!--hidden_field(オブジェクト名, プロパティ名 [, オプション])-->
+  </div>
+
+  <div class="field">
+    <%= form.label :menu %>
+    <%= form.text_field :menu, id: :comment_menu %>
+  </div>
+
+  <div class="field">
+    <%= form.label :comment %>
+    <%= form.text_field :comment, id: :comment_comment %>
+  </div>
+
+  <div class="field">
+    <%= form.label :takeout %>
+    <%= form.text_field :takeout, id: :comment_takeout %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image %>
+    <%= form.text_area :image, id: :comment_image %>
+  </div>
+
+  <div class="actions" >
+    <%= form.submit "作成"  %>
+    <%#= form.submit "作成", comments_path(restaurant_id: @current_restaurant_id), method: :post %>
+    <%#= binding.pry %>
+    <%#= link_to "", comments_path(@current_restaurant_id ), method: :post %>
+    
+  </div>
+<% end %>

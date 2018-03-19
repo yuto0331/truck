@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Comments</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Restaurant</th>
+      <th>User</th>
+      <th>Menu</th>
+      <th>Comment</th>
+      <th>Takeout</th>
+      <th>Image</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+      
+    <% @comments.each do |comment| %>
+      <tr>
+      
+        <% if @restaurant == comment.restaurant_id  %>
+        <td><%= comment.restaurant_id %></td>
+        <td><%= comment.user_id %></td>
+        <td><%= comment.menu %></td>
+        <td><%= comment.comment %></td>
+        <td><%= comment.takeout %></td>
+        <td><%= comment.image %></td>
+        <td><%= link_to 'Show', comment %></td>
+        <td><%= link_to 'Edit', edit_comment_path(comment) %></td>
+        <td><%= link_to 'Destroy', comment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<br>
+
+<%= link_to 'New Comment', new_comment_path(restaurant_id: @restaurant) %>
