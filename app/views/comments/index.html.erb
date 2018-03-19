@@ -20,7 +20,7 @@
     <% @comments.each do |comment| %>
       <tr>
       
-        <% if @restaurant == comment.restaurant_id  %>
+        <% if @restaurant.id == comment.restaurant_id  %>
         <td><%= comment.restaurant_id %></td>
         <td><%= comment.user_id %></td>
         <td><%= comment.menu %></td>
@@ -37,4 +37,4 @@
 </table>
 <br>
 
-<%= link_to 'New Comment', new_comment_path(restaurant_id: @restaurant) %>
+<%= link_to 'New Comment', new_comment_path(restaurant_id: @restaurant.id) %>

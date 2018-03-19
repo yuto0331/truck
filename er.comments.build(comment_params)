@@ -1,0 +1,24 @@
+
+[1mFrom:[0m /home/ubuntu/workspace/truck/app/controllers/comments_controller.rb @ line 40 CommentsController#create:
+
+    [1;34m37[0m: [32mdef[0m [1;34mcreate[0m
+    [1;34m38[0m:   @comment = current_user.comments.build(comment_params)
+    [1;34m39[0m:   [1;34m#@restaurant = @comment.restaurant[0m
+ => [1;34m40[0m:   binding.pry
+    [1;34m41[0m:   @restaurant_id = [1;34;4mRestaurant[0m.find(params[[33m:restaurant_id[0m])
+    [1;34m42[0m:   binding.pry
+    [1;34m43[0m:   @comment.restaurant_id = @restaurant_id
+    [1;34m44[0m: 
+    [1;34m45[0m:   
+    [1;34m46[0m:   binding.pry
+    [1;34m47[0m:   [1;34m#@current_restaurant = Restaurant.find(params[:restaurant_id])[0m
+    [1;34m48[0m:   [1;34m#@comment.restaurant_id = @comment.restaurant_id[0m
+    [1;34m49[0m:  
+    [1;34m50[0m:     [32mif[0m @comment.save
+    [1;34m51[0m:       redirect_to comments_path(@comment, @restaurant), [35mnotice[0m: [31m[1;31m'[0m[31mComment was successfully created.[1;31m'[0m[31m[0m 
+    [1;34m52[0m:     [32melse[0m
+    [1;34m53[0m:       render [33m:new[0m
+    [1;34m54[0m:     [32mend[0m
+    [1;34m55[0m:   
+    [1;34m56[0m: [32mend[0m
+

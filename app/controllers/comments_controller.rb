@@ -4,6 +4,7 @@ class CommentsController < ApplicationController
   # GET /comments
   # GET /comments.json
   def index
+    binding.pry
     @restaurant = Restaurant.find(params[:restaurant_id])
     @comments = @restaurant.comments
     
@@ -24,7 +25,7 @@ class CommentsController < ApplicationController
   def new
     @comment = Comment.new
     # @comment.restaurant_id = Restaurant.find(params[:restaurant_id])
-    @restaurant = Restaurant.find(params[:restaurant_id]).id
+    @restaurant = Restaurant.find(params[:restaurant_id])
   end
 
   # GET /comments/1/edit
@@ -34,15 +35,13 @@ class CommentsController < ApplicationController
   # POST /comments
   # POST /comments.json
   def create
-    # @comment = Comment.new(comment_params)
     @comment = current_user.comments.build(comment_params)
     @restaurant = @comment.restaurant
-    #@current_restaurant = Restaurant.find(params[:restaurant_id])
-    #@comment.restaurant_id = @comment.restaurant_id
-    binding.pry
-   
+    @comment.restaurant_id= @restaurant.id
+    
+  
       if @comment.save
-        redirect_to comments_path(@comment, @restaurant.id), notice: 'Comment was successfully created.' 
+        redirect_to comments_path(restaurant_id: @restaurant.id), notice: 'Comment was successfully created.' 
       else
         render :new
       end
