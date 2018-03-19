@@ -4,7 +4,6 @@ class CommentsController < ApplicationController
   # GET /comments
   # GET /comments.json
   def index
-    binding.pry
     @restaurant = Restaurant.find(params[:restaurant_id])
     @comments = @restaurant.comments
     
@@ -16,9 +15,9 @@ class CommentsController < ApplicationController
   # GET /comments/1
   # GET /comments/1.json
   def show
-    @comments = Comment.all
-    @comment.restaurant_id = Restaurant.find(params[:restaurant_id]).id
-    
+    # @comments = Comment.all
+    # binding.pry
+    # @comment.restaurant_id = Restaurant.find(params[:restaurant_id]).id
   end
 
   # GET /comments/new
@@ -30,6 +29,8 @@ class CommentsController < ApplicationController
 
   # GET /comments/1/edit
   def edit
+    @restaurant = @comment.restaurant
+    
   end
 
   # POST /comments
@@ -67,7 +68,7 @@ class CommentsController < ApplicationController
   def destroy
     @comment.destroy
     respond_to do |format|
-      format.html { redirect_to comments_url, notice: 'Comment was successfully destroyed.' }
+      format.html { redirect_to comments_path(restaurant_id: @comment.restaurant.id), notice: 'Comment was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

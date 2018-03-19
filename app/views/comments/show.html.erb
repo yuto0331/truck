@@ -27,8 +27,8 @@
 
 <p>
   <strong>Image:</strong>
-  <%= @comment.image %>
+  <%= image_tag @comment.image %>
 </p>
 
 <%= link_to 'Edit', edit_comment_path(@comment) %> |
-<%= link_to 'Back', comments_path %>
+<%= link_to 'Back', comments_path(restaurant_id: @comment.restaurant.id) %>

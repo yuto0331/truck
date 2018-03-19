@@ -26,10 +26,10 @@
         <td><%= comment.menu %></td>
         <td><%= comment.comment %></td>
         <td><%= comment.takeout %></td>
-        <td><%= comment.image %></td>
-        <td><%= link_to 'Show', comment %></td>
+        <td><%= image_tag comment.image %></td>
+        <td><%= link_to 'Show', comment_path(comment) %></td>
         <td><%= link_to 'Edit', edit_comment_path(comment) %></td>
-        <td><%= link_to 'Destroy', comment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Destroy', comment_path(comment), method: :delete, data: { confirm: 'Are you sure?' } %></td>
         <% end %>
       </tr>
     <% end %>

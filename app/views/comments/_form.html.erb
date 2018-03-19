@@ -37,7 +37,8 @@
 
   <div class="field">
     <%= form.label :image %>
-    <%= form.text_area :image, id: :comment_image %>
+    <%= form.file_field :image, id: :comment_image %>
+    <%= form.hidden_field :image_cache %>
   </div>
 
   <div class="actions" >
