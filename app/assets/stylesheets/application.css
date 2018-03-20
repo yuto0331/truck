@@ -14,6 +14,74 @@
  *= require_self
  */
 
+/* common */
+
+
+body {
+    font-size :14px;
+    font-family: 'Avenir','Helvetica Neue','Helvetica','Arial','Hiragino Sans','ヒラギノ角ゴシック',YuGothic,'Yu Gothic','メイリオ', Meiryo,'ＭＳ Ｐゴシック','MS PGothic';
+}
+
+a {
+  text-decoration: none;
+}
+
+p{
+  line-height: 2;
+}
+
+/* header */
+
+header {
+  background: url('sora.jpg');
+  background-size: cover;
+}
+
+header .container {
+  width: 820px;
+  margin: 0 auto;
+  height: 100px;
+  padding-top: 20px;
+}
+
+.header_tag {
+  color: #fff;
+  font-size: 15px;
+  margin-bottom: 10px;
+  
+}
+/* top */
+#top_btn{
+  display: inline-block;
+  width: 290px;
+  line-height: 100px;
+  background: #CCCCCC;
+  text-align: center;
+  color: #FF3366;
+  border-radius: 50px;
+  opacity: 0.9;
+}
+
+#top_btn:hover{
+  opacity: 1;
+}
+
+#top_logo {
+  background-image: url("douro.jpg");
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.top_container{
+  
+  
+}
+
+
+
+
+
 .user_image {
   border-radius: 50%;
   float:left;
