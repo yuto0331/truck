@@ -35,6 +35,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'bcrypt','3.1.11'
 gem 'carrierwave'
 gem 'mini_magick'
+gem "font-awesome-rails"
 
 
 group :development, :test do

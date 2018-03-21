@@ -1,3 +1,47 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+// show
+
+
+
+
+
+section .mypage_show {
+  background: #f8f8f8;
+ 
+}
+
+#mypage {
+  margin: 10px 50px;
+}
+
+.list {
+  float: left;
+  width: 100%;
+  height: 500px  ;
+  margin: 0 300px;
+  padding-right: 40px;
+  overflow: scroll;
+}
+
+
+
+#user_restaurant_btn {
+  display: inline-block;
+  width: 100px;
+  line-height: 50px;
+  background: #CCCCCC;
+  text-align: center;
+  color: #FF3366;
+  border-radius: 50px;
+  opacity: 0.5;
+  margin-bottom: 0;
+}
+
+#user_restaurant_btn:hover{
+  opacity: 1;
+}
+  

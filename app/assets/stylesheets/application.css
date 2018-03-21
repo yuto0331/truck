@@ -12,14 +12,25 @@
  *
  *= require_tree .
  *= require_self
+ *= require font-awesome
  */
 
 /* common */
 
 
+
 body {
+  /*最後に798→800*/
+    width :798px;
+    margin: 40px auto;
     font-size :14px;
     font-family: 'Avenir','Helvetica Neue','Helvetica','Arial','Hiragino Sans','ヒラギノ角ゴシック',YuGothic,'Yu Gothic','メイリオ', Meiryo,'ＭＳ Ｐゴシック','MS PGothic';
+    background: #f8f8f8;
+    padding: 40px 80px;
+    background-color: #fff;
+    
+    /*最後に消す 消すときにwidthを800pxにする*/
+     border: #f6bb9e 1px solid;
 }
 
 a {
@@ -30,11 +41,34 @@ p{
   line-height: 2;
 }
 
+section{
+  padding: 90px 0;
+  background: #f8f8f8;
+}
+
+section .container {
+  width: 50px;
+  margin: 0 auto;
+}
+
+h1 {
+  margin: 0 100px;
+  height: 100px;
+}
+
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+
 /* header */
 
 header {
-  background: url('sora.jpg');
-  background-size: cover;
+  /*background: url('sirokuro.JPG');*/
+  /*background-size: cover;*/
+  background-color: #99CCCC;
 }
 
 header .container {
@@ -42,6 +76,7 @@ header .container {
   margin: 0 auto;
   height: 100px;
   padding-top: 20px;
+  position: relative;
 }
 
 .header_tag {
@@ -51,48 +86,80 @@ header .container {
   
 }
 /* top */
-#top_btn{
-  display: inline-block;
-  width: 290px;
+/*#top_btn{*/
+/*  display: inline-block;*/
+/*  width: 100px;*/
+/*  line-height: 100px;*/
+/*  background: #CCCCCC;*/
+/*  text-align: center;*/
+/*  color: #FF3366;*/
+/*  border-radius: 50px;*/
+/*  opacity: 0.9;*/
+/*  margin: 200px 280px;*/
+/*}*/
+
+/*#top_btn:hover{*/
+/*  opacity: 1;*/
+/*}*/
+
+#top_btn {
+  background-color: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  width: 100px;
   line-height: 100px;
-  background: #CCCCCC;
-  text-align: center;
-  color: #FF3366;
   border-radius: 50px;
-  opacity: 0.9;
+  margin: 200px 280px
 }
-
-#top_btn:hover{
-  opacity: 1;
+#top_btn:hover {
+  background-color: rgba(255, 255, 255, .2);
 }
-
 #top_logo {
+  position: absolute;
+  /*right: 0;*/
+  /*bottom: 0;*/
   background-image: url("douro.jpg");
   background-size: cover;
-  width: 100%;
   height: 100%;
+  width: 800px;
 }
 
-.top_container{
-  
-  
+/* _form */
+
+.input .field {
+  font-size: 26px;
+  /*text-align: center;*/
+  margin: 0 0 0px;
+  font-weight: normal;
 }
 
-
-
-
+.input .action {
+    display: inline-block;
+    padding: 7px 20px;
+	  border-radius: 25px;
+    text-decoration: none;
+    color: #000000;
+    background-image: -webkit-linear-gradient(45deg, #dcdcdc 0%, #f5f5f5 100%);
+    background-image: linear-gradient(45deg, #dcdcdc 0%, #f5f5f5 100%);
+    transition: .4s;
+}
 
 .user_image {
   border-radius: 50%;
   float:left;
   width: 100px;
   height: 100px;
-    
 }
 
-.restaurant_image {
-  float:left;
-  width: 100px;
-  height: 100px;
-    
+/*footer*/
+
+footer {
+  padding: 0 0;
+  text-align: center;
+  background-color: #99CCCC;
+  height: 50px;
+  margin-bottom: 0;
+  padding: 0;
 }
+
+

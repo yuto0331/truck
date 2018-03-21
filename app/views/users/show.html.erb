@@ -1,27 +1,22 @@
-<p id="notice"><%= notice %></p>
-<h2>お気に入り一覧</h2>
-<p>
-  <strong>Image:</strong>
-  <%= image_tag @user.image, class: 'user_image' %>
-</p>
+<section class = "mypage_show">
+  <p id="notice"><%= notice %></p>
+  <p id = "mypage">
+    <%= link_to image_tag(@user.image, class: 'user_image'), edit_user_path(@user) %> 
+  </p>
+  <p>
+    <h1>
+    <%= @user.name %>のお気に入り一覧
+    </h1>
+  </p>
+  <div class="list">
+    <% @user.favorite_restaurants.each do |restaurant| %>
+      <ul>
+          <li>店名：<%= restaurant.name %>場所：<%= restaurant.place %></li>
+      </ul>
+    <% end %>
+  </div>
+  
+</section>
 
-<p>
-  <strong>Name:</strong>
-  <%= @user.name %>
-</p>
-
-
-<% @user.favorite_restaurants.each do |restaurant| %>
-<ol>
-    <li>店名：<%= restaurant.name %>場所：<%= restaurant.place %></li>
-</ol>
-
-
-<% end %>
-
-
-<%= link_to '食事処を探す', restaurants_path %>
-
-
-<%= link_to 'Edit', edit_user_path(@user) %> 
-<%= link_to 'Back', users_path %>
+<%= link_to '食事処を探す', restaurants_path, id: "user_restaurant_btn" %>
+<%= link_to '戻る', root_url, id: "user_restaurant_btn" %>
