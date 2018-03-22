@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @bath.user_id %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @bath.name %>
+</p>
+
+<p>
+  <strong>Place:</strong>
+  <%= @bath.place %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @bath.email %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @bath.content %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @bath.image %>
+</p>
+
+<%= link_to 'Edit', edit_bath_path(@bath) %> |
+<%= link_to 'Back', baths_path %>

@@ -1,0 +1,43 @@
+<section class = "bath_room fullheight">
+<p id="notice"><%= notice %></p>
+
+<h1 id="bath_index">お風呂情報</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Name</th>
+      <th>Place</th>
+      <th>Email</th>
+      <th>Content</th>
+      <th>Image</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @baths.each do |bath| %>
+      <tr>
+        <td><%= bath.user_id %></td>
+        <td><%= bath.name %></td>
+        <td><%= bath.place %></td>
+        <td><%= bath.email %></td>
+        <td><%= bath.content %></td>
+        <td><%= bath.image %></td>
+        <td><%= link_to 'Show', bath %></td>
+        <td><%= link_to 'Edit', edit_bath_path(bath) %></td>
+        <td><%= link_to 'Destroy', bath, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'お風呂情報を投稿', new_bath_path, class:"origin_next_btn bath_index_new" %>
+<div>
+<%= link_to '←', user_path(id: current_user.id), class:"origin_back_btn" %>
+</div>
+
+</section>

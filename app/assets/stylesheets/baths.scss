@@ -1,0 +1,32 @@
+// Place all the styles related to the Baths controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+//new,index,show, 
+
+.bath_room{
+  // background: #f8f8f8;     後で同じグレーに戻す
+   background: #FFFFF0;
+}
+
+//index
+
+.bath_index_new {
+  margin: 50px 250px 10px 250px;
+}
+
+#bath_index {
+  text-align: center;
+}
+
+
+//new
+
+.bath_index_new {
+  margin: 50px 250px 10px 250px;
+}
+
+#bath_new {
+  text-align: center;
+}

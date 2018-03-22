@@ -10,6 +10,7 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
+    @user = User.find(params[:id])
   end
 
   # GET /users/new
@@ -26,10 +27,9 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     
-    
-    session[:user_id] = @user.id
     respond_to do |format|
       if @user.save
+        session[:user_id] = @user.id
         format.html { redirect_to @user, notice: '登録が完了しました' }
         format.json { render :show, status: :created, location: @user }
       else

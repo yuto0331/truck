@@ -10,4 +10,6 @@ class User < ApplicationRecord
     has_many :restaurants, dependent: :destroy
     has_many :favorite_restaurants, through: :favorites, source: :restaurant
     has_many :comments
+    has_many :baths
+    has_many :preference_baths, through: :preferences, source: :bath
 end

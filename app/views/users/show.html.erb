@@ -9,6 +9,7 @@
     </h1>
   </p>
   <%= link_to '食事処を探す', restaurants_path, class: "origin_next_btn user_show_index" %>
+  <%= link_to 'お風呂を探す', baths_path, class: "origin_next_btn user_show_index" %>
   <div class="favorites">
     <% @user.favorite_restaurants.each do |restaurant| %>
       <table>
