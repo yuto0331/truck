@@ -1,4 +1,4 @@
-<section class = "restaurant_room" >
+<section class = "restaurant_room fullheight" >
   <p id="notice"><%= notice %></p>
   
   <p>
@@ -21,24 +21,28 @@
       <strong>投稿者:</strong>
       <%=  @restaurant.user.name %>さん
     </p>
-    </div>
-  <%= link_to 'クチコミ', comments_path(restaurant_id: @restaurant.id), class:"restaurant_show_btn" %> 
 
-  <% unless @restaurant.user == current_user %>
-    <% if @favorite.present? %>
-      <%= link_to 'お気に入り解除', favorite_path(restaurant_id: @restaurant.id), method: :delete, class: 'restaurant_show_btn' %>
-    <% else %>
-      <%= link_to 'お気に入り登録', favorites_path(restaurant_id: @restaurant.id), method: :post, class: 'restaurant_show_btn' %>
-    <% end %>
-  <% end %>
-  </container>
   
+    <div class ="favorite_btn">
+    <% unless @restaurant.user == current_user %>
+      <% if @favorite.present? %>
+        <%= link_to 'お気に入り解除', favorite_path(restaurant_id: @restaurant.id), method: :delete, class: 'restaurant_show_favorote' %>
+      <% else %>
+        <%= link_to 'お気に入り登録', favorites_path(restaurant_id: @restaurant.id), method: :post, class: 'restaurant_show_favorote' %>
+      <% end %>
+    <% end %>
+    </div>
+    
   <section>
     <% if current_user.id == @restaurant.user_id %>
-      <%= link_to '編集', edit_restaurant_path(@restaurant), id:"restaurant_show_last_btn" %>
-      <%= link_to '削除', restaurant_path(@restaurant), id:"restaurant_show_last_btn", method: :delete, data: { confirm: 'Are you sure?' } %>
+      <P><%= link_to '編集', edit_restaurant_path(@restaurant), id:"restaurant_show_edit_btn" %></P>
+      <P><%= link_to '削除', restaurant_path(@restaurant), id:"restaurant_show_edit_btn", method: :delete, data: { confirm: 'Are you sure?' } %></P>
     <% end %>
-    <%= link_to '←', restaurants_path, id:"restaurant_show_back_btn" %>
+    <%= link_to '←', restaurants_path, class:"origin_back_btn" %>
   </section>
+
+  </div>
+    <%= link_to 'クチコミを見る', comments_path(restaurant_id: @restaurant.id), class:"origin_next_btn" %> 
+  </container>
   
 </section>

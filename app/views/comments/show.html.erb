@@ -1,23 +1,23 @@
+<section class = "fullheight" >
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Restaurant:</strong>
+  <%= image_tag @comment.image, id:"comment_image" %>
+</p>
+
+<p>
+  <strong>店名:</strong>
   <%= @comment.restaurant_id %>
 </p>
 
-<p>
-  <strong>User:</strong>
-  <%= @comment.user_id %>
-</p>
+<!--<p>-->
+<!--  <strong>User:</strong>-->
+<!--  <%= @comment.user_id %>-->
+<!--</p>-->
 
 <p>
-  <strong>Menu:</strong>
+  <strong>食べたメニュー:</strong>
   <%= @comment.menu %>
-</p>
-
-<p>
-  <strong>Comment:</strong>
-  <%= @comment.comment %>
 </p>
 
 <p>
@@ -26,9 +26,16 @@
 </p>
 
 <p>
-  <strong>Image:</strong>
-  <%= image_tag @comment.image %>
+  <strong>クチコミ:</strong>
+  <%= @comment.comment %>
 </p>
 
-<%= link_to 'Edit', edit_comment_path(@comment) %> |
-<%= link_to 'Back', comments_path(restaurant_id: @comment.restaurant.id) %>
+  <% if current_user.id == @comment.user_id %>
+    <%= link_to 'Edit', edit_comment_path(@comment) %>
+    <!--<%# binding.pry %>-->
+  <% end %>
+  
+  
+  
+  <%= link_to '←', comments_path(restaurant_id: @comment.restaurant.id), class:"origin_back_btn" %>
+</section>

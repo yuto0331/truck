@@ -50,7 +50,7 @@ section .restaurant_input .field textarea {
   top: -60px;
   left: 0;
   right: 50;
-  margin: 0 auto;
+  margin: 15px 0;
 }
 
 .restaurant {
@@ -83,19 +83,20 @@ section .restaurant_input .field textarea {
   margin: 0 50px 0 50px;
 }
 
-.restaurant_show_btn{
-  display: inline-block;
-  width: 220px;
-  line-height: 100px;
-  background: #CCCCCC;
-  text-align: center;
-  color: #F0FFFF;
-  border-radius: 50px;
-  opacity: 0.9;
-  margin: center;
-  float: right;
-  font-size: 25px;
-  margin: 10px 10px 10px 50px;
+
+.restaurant_show_favorote {
+    display: inline-block;
+    padding: 0.3em 1em;
+    text-decoration: none;
+    color: #67c5ff;
+    border: solid 2px #67c5ff;
+    border-radius: 3px;
+    transition: .4s;
+}
+
+.restaurant_show_favorote:hover {
+    background: #67c5ff;
+    color: white;
 }
 
 container .restaurant_show{
@@ -104,6 +105,9 @@ container .restaurant_show{
 
 .restaurant_show {
   float: left;
+}
+.favorite_btn{
+  float: left;  
 }
 
 //new?
@@ -124,52 +128,32 @@ container .restaurant_show{
   opacity: 1;
 }
 
-#restaurant_show_last_btn {
+#restaurant_show_edit_btn {
   display: inline-block;
   text-decoration: none;
   color: #668ad8;
-  width: 80px;
-  height: 60px;
-  line-height: 60px;
-  border-radius: 50%;
-  border: solid 2px #668ad8;
+  width: 50px;
+  height: 30px;
+  line-height: 30px;
+  // border-radius: 50%;
+  border: solid 1px #668ad8;
   text-align: center;
   vertical-align: middle;
   overflow: hidden;
   font-weight: lighter ;
   transition: .4s;
-  font-size: 20px;
+  font-size: 15px;
   float: left;
   margin-bottom: 0;
+  margin: 5px;
 }
 
-#restaurant_show_last_btn:hover {
+#restaurant_show_edit_btn:hover {
     background: #b3e1ff;
 }
 
-#restaurant_show_back_btn {
-    display: inline-block;
-    text-decoration: none;
-    background: #ff8181;
-    color: #FFF;
-    width: 60px;
-    height: 60px;
-    line-height: 60px;
-    border-radius: 50%;
-    text-align: center;
-    font-weight: bold;
-    vertical-align: middle;
-    // overflow: hidden;
-    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
-    border-bottom: solid 3px #bd6565;
-    transition: .4s;
+.resutaurant_index_new {
+  margin: 50px 250px 10px 250px;
 }
 
-#restaurant_show_back_btn:active{
-    -ms-transform: translateY(2px);
-    -webkit-transform: translateY(2px);
-    transform: translateY(2px);
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
-    border-bottom: none;
-}
 

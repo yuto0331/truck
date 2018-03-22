@@ -2,6 +2,6 @@
 <h1 id="comment_new">口コミ</h1>
 
 <%= render 'form', comment: @comment %>
-<%= link_to 'Back', comments_path(restaurant_id: @restaurant.id) %>
+<%= link_to '←', comments_path(restaurant_id: @restaurant.id), class: "origin_back_btn" %>
 
 </section>

@@ -1,6 +1,6 @@
-<h1>Editing Restaurant</h1>
+<h1>お店の編集</h1>
 
 <%= render 'form', restaurant: @restaurant %>
 
-<%= link_to 'Show', @restaurant %> |
-<%= link_to 'Back', restaurants_path %>
+<%= link_to '←', @restaurant, class:"origin_back_btn" %> 
+<!--<%#= link_to '←', restaurants_path %>-->

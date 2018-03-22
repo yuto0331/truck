@@ -1,4 +1,4 @@
-<section class = "user">
+<section class = "user fullheight">
   <p id="notice"><%= notice %></p>
   <p id = "mypage">
     <%= link_to image_tag(@user.image, class: 'user_image'), edit_user_path(@user) %> 
@@ -8,6 +8,7 @@
     <%= @user.name %>のお気に入り一覧
     </h1>
   </p>
+  <%= link_to '食事処を探す', restaurants_path, class: "origin_next_btn user_show_index" %>
   <div class="favorites">
     <% @user.favorite_restaurants.each do |restaurant| %>
       <table>
@@ -19,7 +20,8 @@
     <% end %>
   </div>
   
-</section>
 
-<%= link_to '食事処を探す', restaurants_path, id: "user_restaurant_btn" %>
-<%= link_to '戻る', root_url, id: "user_restaurant_btn" %>
+
+
+<%= link_to '←', root_url, class: "origin_back_btn show_btn" %>
+</section>

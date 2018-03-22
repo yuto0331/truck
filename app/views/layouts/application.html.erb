@@ -9,24 +9,27 @@
   </head>
 
   <body>
+    
     <% flash.each do |key, value| %>             
       <%= content_tag(:div, value, class: "#{key}") %>
     <% end %>
     <!--上記はフラッシュメッセージがあった場合の表示用 ログインシステム10-->
+    
     <header>
-      <div class="header-logo">DriveStation</div>
+      <!--<a class="header-logo" href="" >DriveStation</a>-->
+      　　<%= link_to 'DriveStation', restaurants_path, class: "header_logo" %>
+      　　<!--クラスを当てると飛ばなくなる　後で確認-->
       <div class="container">
         <% if logged_in? %>
-        　<%= link_to "ログアウト", session_path(current_user.id), method: :delete, class: "header_tag" %>
           <%= link_to "私のお気に入り", user_path(current_user.id), class: "header_tag" %>
           <%= link_to '食事処一覧', restaurants_path, class: "header_tag" %>
-    
+          <%= link_to "ログアウト", session_path(current_user.id), method: :delete, class: "header_tag" %>
         <% else %>
           <%= link_to "新規登録", new_user_path, class: "header_tag" %>
           <%= link_to "ログイン", new_session_path, class: "header_tag" %>
         <% end %>
       </div>  
-      </div>
+    
     </header>
     
     
@@ -36,7 +39,7 @@
       <p>DIC 2017年10月期 </p>
     </footer>
     
-    
+    </div>
   </body>
   
 </html>

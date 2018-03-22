@@ -1,4 +1,4 @@
-<section class = "comment_room">
+<section class = "comment_room fullheight">
 <p id="notice"><%= notice %></p>
 
 <h1 id="comment_index">皆の食べたもの</h1>
@@ -10,8 +10,8 @@
         <div class="comment">
         <%= link_to image_tag(comment.image, :size =>'150x150', class: "img01 waku03 shadow rotate01"), comment_path(comment) %>
         <br><%= comment.menu %>
-        <br><%= comment.comment %>
-        <br><%= comment.takeout %>
+        <!--<br><%= comment.comment %>-->
+        <!--<br><%= comment.takeout %>-->
         </div>
         <!--<td><%#= link_to 'Show', comment_path(comment) %></td>-->
         <!--<td><%#= link_to 'Edit', edit_comment_path(comment) %></td>-->
@@ -24,5 +24,5 @@
 
 <br>
 
-<%= link_to '食べたメニューを投稿', new_comment_path(restaurant_id: @restaurant.id), id:"comment_index_btn" %>
-<%= link_to '←', restaurants_path, id:"comment_index_back_btn" %>
+<%= link_to 'メニューを新規投稿', new_comment_path(restaurant_id: @restaurant.id), class:"origin_next_btn commnet_index_new" %>
+<%= link_to '←', restaurants_path, class:"origin_back_btn" %>

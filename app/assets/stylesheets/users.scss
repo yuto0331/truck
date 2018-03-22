@@ -31,21 +31,21 @@ section .user {
 }
 
 
-#user_restaurant_btn {
-  display: inline-block;
-  width: 100px;
-  line-height: 50px;
-  background: #CCCCCC;
-  text-align: center;
-  color: #FF3366;
-  border-radius: 50px;
-  opacity: 0.5;
-  margin-bottom: 0;
-}
+// #user_restaurant_btn {
+//   display: inline-block;
+//   width: 100px;
+//   line-height: 50px;
+//   background: #CCCCCC;
+//   text-align: center;
+//   color: #FF3366;
+//   border-radius: 50px;
+//   opacity: 0.5;
+//   margin-bottom: 0;
+// }
 
-#user_restaurant_btn:hover{
-  opacity: 1;
-}
+// #user_restaurant_btn:hover{
+//   opacity: 1;
+// }
 
 
 // show
@@ -67,8 +67,14 @@ section .user {
   padding: 0 50px;
 }
 
+.show_btn {
+    color: red;
+    position: fixed;
+    bottom: 10px;
+    left: 300px;
+    z-index: 999;
+ }
 
-
-
-
-
+.user_show_index {
+  margin: 0 250px 0 250px;
+}
