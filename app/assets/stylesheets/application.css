@@ -17,8 +17,6 @@
 
 /* common */
 
-
-
 body {
   /*最後に798→800*/
     width :798px;
@@ -26,7 +24,8 @@ body {
     font-size :14px;
     font-family: 'Avenir','Helvetica Neue','Helvetica','Arial','Hiragino Sans','ヒラギノ角ゴシック',YuGothic,'Yu Gothic','メイリオ', Meiryo,'ＭＳ Ｐゴシック','MS PGothic';
     background: #f8f8f8;
-    padding: 40px 80px;
+    /*padding: 0;*/
+    padding: 40px 80px;  
     background-color: #fff;
     
     /*最後に消す 消すときにwidthを800pxにする*/
@@ -42,8 +41,7 @@ p{
 }
 
 section{
-  padding: 90px 0;
-  background: #f8f8f8;
+  padding: 10px 0 180px 0;
 }
 
 section .container {
@@ -65,23 +63,33 @@ h1 {
 
 /* header */
 
+
+
 header {
   /*background: url('sirokuro.JPG');*/
   /*background-size: cover;*/
   background-color: #99CCCC;
+  color: #fff;
 }
 
 header .container {
   width: 820px;
   margin: 0 auto;
-  height: 100px;
+  height: 50px;
   padding-top: 20px;
   position: relative;
 }
 
+.header-logo {
+  float: left;
+  font-size: 30px;
+  padding: 20px 40px;
+}
+
 .header_tag {
   color: #fff;
-  font-size: 15px;
+  font-size: 20px;
+  padding: 15px;
   margin-bottom: 10px;
   
 }
@@ -151,15 +159,35 @@ header .container {
   height: 100px;
 }
 
+.field {
+  width: 100%;
+  border: #669999 2px solid;
+  /*// borderは後で消す?*/
+  border-collapse: collapse;
+}
+
+.field th {
+  width: 15rem;
+  background-color: #CCFFFF;
+  text-align: left;
+  vertical-align: top;
+}
+
+.field textarea {
+  width: 600px;
+  height: 100px;
+  padding: 5px;
+}
+
+
+
 /*footer*/
 
-footer {
-  padding: 0 0;
+.footer {
+  padding: 0;
   text-align: center;
   background-color: #99CCCC;
   height: 50px;
-  margin-bottom: 0;
-  padding: 0;
+  margin: 0;
 }
-
 

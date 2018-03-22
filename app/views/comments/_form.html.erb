@@ -12,40 +12,42 @@
     </div>
   <% end %>
   
-  
-  <div class="field">
-    <%= form.label :restaurant_id %>
-    <%= form.hidden_field :restaurant_id, :value => @restaurant.id %>
-
-    <!--hidden_field(オブジェクト名, プロパティ名 [, オプション])-->
-  </div>
-
-  <div class="field">
-    <%= form.label :menu %>
-    <%= form.text_field :menu, id: :comment_menu %>
-  </div>
-
-  <div class="field">
-    <%= form.label :comment %>
-    <%= form.text_field :comment, id: :comment_comment %>
-  </div>
-
-  <div class="field">
-    <%= form.label :takeout %>
-    <%= form.text_field :takeout, id: :comment_takeout %>
-  </div>
-
-  <div class="field">
-    <%= form.label :image %>
-    <%= form.file_field :image, id: :comment_image %>
-    <%= form.hidden_field :image_cache %>
-  </div>
-
-  <div class="actions" >
-    <%= form.submit "作成"  %>
-    <%#= form.submit "作成", comments_path(restaurant_id: @current_restaurant_id), method: :post %>
-    <%#= binding.pry %>
-    <%#= link_to "", comments_path(@current_restaurant_id ), method: :post %>
+  <section class = "restaurant_input">
+   <table border = 2> 
+    <!--<tr class="field">-->
+    <!--  <td><%#= form.label :restaurant_id %></td>-->
+    <!--  <td><%#= form.hidden_field :restaurant_id, :value => @restaurant.id %></td>-->
+    <!--</tr>-->
     
-  </div>
+      <%= form.hidden_field :restaurant_id, :value => @restaurant.id %>
+
+   <tr class="field">
+      <td><%= form.label :menu %></td>
+      <td><%= form.text_field :menu, id: :comment_menu %></td>
+    </tr>
+  
+    <tr class="field">
+      <td><%= form.label :comment %></td>
+      <td><%= form.text_field :comment, id: :comment_comment %></td>
+    </tr>
+  
+    <tr class="field">
+      <td><%= form.label :takeout %></td>
+      <td><%= form.text_field :takeout, id: :comment_takeout %></td>
+    </tr>
+  
+    <tr class="field">
+      <td><%= form.label :image %></td>
+      <td><%= form.file_field :image, id: :comment_image %></td>
+      <td><%= form.hidden_field :image_cache %></td>
+    </tr>
+  
+    <tr class="actions" >
+      <%= form.submit "作成"  %>
+      <%#= form.submit "作成", comments_path(restaurant_id: @current_restaurant_id), method: :post %>
+      <%#= binding.pry %>
+      <%#= link_to "", comments_path(@current_restaurant_id ), method: :post %>
+    </tr>
+  </table>
+  </section>
 <% end %>

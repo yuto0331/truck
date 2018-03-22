@@ -1,38 +1,44 @@
-<p id="notice"><%= notice %></p>
+<section class = "restaurant_room" >
+  <p id="notice"><%= notice %></p>
+  
+  <p>
+    <%= image_tag @restaurant.image, class: "restaurant_show_image" %>
+  </p>
 
-<p>
-  <%= image_tag @restaurant.image %>
-</p>
+  <container class="restaurant_show clearfix">
+    <div class="restaurant_name">
+    <p>
+      <strong>店名</strong>
+      <%= @restaurant.name %>
+    </p>
+    
+    <p>
+      <strong>県名:</strong>
+      <%= @restaurant.place %>
+    </p>
+    
+    <p>
+      <strong>投稿者:</strong>
+      <%=  @restaurant.user.name %>さん
+    </p>
+    </div>
+  <%= link_to 'クチコミ', comments_path(restaurant_id: @restaurant.id), class:"restaurant_show_btn" %> 
 
-<p>
-  <strong>店名</strong>
-  <%= @restaurant.name %>
-</p>
-
-<p>
-  <strong>Place:</strong>
-  <%= @restaurant.place %>
-</p>
-
-<p>
-  <strong>投稿者</strong>
-  <%=  @restaurant.user.name %>
-</p>
-
-<%= link_to 'MENU', comments_path(restaurant_id: @restaurant.id) %> 
-
-
-<% unless @restaurant.user == current_user %>
-  <% if @favorite.present? %>
-    <%= link_to 'お気に入り解除する', favorite_path(restaurant_id: @restaurant.id), method: :delete, class: 'btn btn-danger' %>
-  <% else %>
-    <%= link_to 'お気に入りする', favorites_path(restaurant_id: @restaurant.id), method: :post, class: 'btn btn-primary' %>
+  <% unless @restaurant.user == current_user %>
+    <% if @favorite.present? %>
+      <%= link_to 'お気に入り解除', favorite_path(restaurant_id: @restaurant.id), method: :delete, class: 'restaurant_show_btn' %>
+    <% else %>
+      <%= link_to 'お気に入り登録', favorites_path(restaurant_id: @restaurant.id), method: :post, class: 'restaurant_show_btn' %>
+    <% end %>
   <% end %>
-<% end %>
-
-  <% if current_user.id == @restaurant.user_id %>
-    <%= link_to 'Edit', edit_restaurant_path(@restaurant) %>
-    <%= link_to 'Destroy', restaurant_path(@restaurant), method: :delete, data: { confirm: 'Are you sure?' } %>
-  <% end %>
-  <%= link_to 'Back', restaurants_path %>
-</div>
+  </container>
+  
+  <section>
+    <% if current_user.id == @restaurant.user_id %>
+      <%= link_to '編集', edit_restaurant_path(@restaurant), id:"restaurant_show_last_btn" %>
+      <%= link_to '削除', restaurant_path(@restaurant), id:"restaurant_show_last_btn", method: :delete, data: { confirm: 'Are you sure?' } %>
+    <% end %>
+    <%= link_to '←', restaurants_path, id:"restaurant_show_back_btn" %>
+  </section>
+  
+</section>

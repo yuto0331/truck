@@ -11,6 +11,7 @@ class RestaurantsController < ApplicationController
   # GET /restaurants/1
   # GET /restaurants/1.json
   def show
+    @favorite = current_user.favorites.find_by(restaurant_id: @restaurant.id)
   end
 
   # GET /restaurants/new
@@ -30,7 +31,7 @@ class RestaurantsController < ApplicationController
 
     respond_to do |format|
       if @restaurant.save
-        format.html { redirect_to @restaurant, notice: 'Restaurant was successfully created.' }
+        format.html { redirect_to @restaurant, notice: 'レストラン情報を新しく投稿しました' }
         format.json { render :show, status: :created, location: @restaurant }
       else
         format.html { render :new }

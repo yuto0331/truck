@@ -14,6 +14,7 @@
     <% end %>
     <!--上記はフラッシュメッセージがあった場合の表示用 ログインシステム10-->
     <header>
+      <div class="header-logo">DriveStation</div>
       <div class="container">
         <% if logged_in? %>
         　<%= link_to "ログアウト", session_path(current_user.id), method: :delete, class: "header_tag" %>
@@ -24,14 +25,14 @@
           <%= link_to "新規登録", new_user_path, class: "header_tag" %>
           <%= link_to "ログイン", new_session_path, class: "header_tag" %>
         <% end %>
-        
+      </div>  
       </div>
     </header>
     
     
     <%= yield %>
     
-    <footer>
+    <footer class="footer">
       <p>DIC 2017年10月期 </p>
     </footer>
     

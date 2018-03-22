@@ -2,12 +2,43 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-// show
+//new,index,show, 
+
+.restaurant_room {
+  // background: #f8f8f8;     後で同じグレーに戻す
+   background: #F0FFFF;
+}
+
+//new
+
+#restaurant_new {
+  text-align: center;
+}
+
+
+section .restaurant_input .field{
+  background-color: red;
+}
+
+section .restaurant_input .field td{
+  width: 20rem;
+  height: 5rem;
+  background-color: #CCFFFF;
+  text-align: left;
+  vertical-align: top;
+}
+
+section .restaurant_input .field textarea {
+  width: 600px;
+  height: 100px;
+  padding: 5px;
+}
+
+// index
 
 #restaurant_index{
   text-align: center;
   margin: 20px ;
-  
 }
 
 .restaurant .restaurant_image {
@@ -26,21 +57,56 @@
   background: #fff;
   width: 250px;
   box-sizing: border-box;
-  padding: 0 60px 0;
   position: relative; 
+  float: left;
+  margin: 5px;
+  margin-bottom: 20px;
+  padding: 20px 20px 20px 50px;
 }
 
 .restaurant h3{
  text-align: center;
 }
 
-.restaurant {
-  background: #fff;
-  float: left;
-  margin: 20px;
-  margin-bottom: 20px;
-  padding: 20px 20px 20px 50px;
+
+
+
+// show
+.restaurant_show_image {
+  width: 600px;
+  height: 500px;
+  margin: 0 80px;
 }
+
+.restaurant_name {
+  float: left;
+  margin: 0 50px 0 50px;
+}
+
+.restaurant_show_btn{
+  display: inline-block;
+  width: 220px;
+  line-height: 100px;
+  background: #CCCCCC;
+  text-align: center;
+  color: #F0FFFF;
+  border-radius: 50px;
+  opacity: 0.9;
+  margin: center;
+  float: right;
+  font-size: 25px;
+  margin: 10px 10px 10px 50px;
+}
+
+container .restaurant_show{
+  float: left;  
+}
+
+.restaurant_show {
+  float: left;
+}
+
+//new?
 
 #new_restaurant_btn {
   display: inline-block;
@@ -57,3 +123,53 @@
 #new_restaurant_btn:hover{
   opacity: 1;
 }
+
+#restaurant_show_last_btn {
+  display: inline-block;
+  text-decoration: none;
+  color: #668ad8;
+  width: 80px;
+  height: 60px;
+  line-height: 60px;
+  border-radius: 50%;
+  border: solid 2px #668ad8;
+  text-align: center;
+  vertical-align: middle;
+  overflow: hidden;
+  font-weight: lighter ;
+  transition: .4s;
+  font-size: 20px;
+  float: left;
+  margin-bottom: 0;
+}
+
+#restaurant_show_last_btn:hover {
+    background: #b3e1ff;
+}
+
+#restaurant_show_back_btn {
+    display: inline-block;
+    text-decoration: none;
+    background: #ff8181;
+    color: #FFF;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 50%;
+    text-align: center;
+    font-weight: bold;
+    vertical-align: middle;
+    // overflow: hidden;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+    border-bottom: solid 3px #bd6565;
+    transition: .4s;
+}
+
+#restaurant_show_back_btn:active{
+    -ms-transform: translateY(2px);
+    -webkit-transform: translateY(2px);
+    transform: translateY(2px);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
+    border-bottom: none;
+}
+

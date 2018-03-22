@@ -6,8 +6,6 @@ class CommentsController < ApplicationController
   def index
     @restaurant = Restaurant.find(params[:restaurant_id])
     @comments = @restaurant.comments
-    
-    
     #@comments.restaurant_id = Restaurant.find_by(params[:restaurant_id]).id
     #@comment.restaurant_id = Restaurant.find_by(params[:restaurant_id]).id #ココには不要、上段で入っている
   end

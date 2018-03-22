@@ -1,4 +1,7 @@
-<%= form_with(model: user, local: true) do |form| %>
+<!--<%#= form_with(model: user, local: true) do |form| %>   クラスの入れ方         -->　
+
+<%= form_with(model: user, local: true, html: {class: 'entryForm'}) do |form| %>
+
   <% if user.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
@@ -12,35 +15,39 @@
   <% end %>
   
   <section class="input">
-    <div class="field">
-      <%= form.label :name %>
-      名前？
-      <%= form.text_field :name, id: :user_name %>
-    </div>
-  
-    <div class="field">
-      <%= form.label :email %>
-      <%= form.text_field :email, id: :user_email %>
-    </div>
-  
-    <div class="field">
-      <%= form.label :image %>
-      <%= form.file_field :image, id: :user_image %>
-      <%= form.hidden_field :image_cache %>
-    </div>
-  
-    <div class="field">
-      <%= form.label :password %>
-      <%= form.password_field :password, id: :user_password %>
-    </div>
+    <table border="1"> 
+    <!--後でborderは消す-->
+      <tr class="field">
+        <th><%= form.label :お名前 %></th>
+        <td><%= form.text_field :name, id: :user_name %></td>
+      </tr>
+     
+      <tr class="field">
+        <th><%= form.label :アドレス %></th>
+        <td><%= form.text_field :email, id: :user_email %></td>
+      </tr>
     
-    <div class="field">
-      <%= form.label :password_confirmation %>
-      <%= form.password_field :password_confirmation, id: :user_password %>
-    </div>
-  
-    <div class="actions">
-      <%= form.submit "作成 ？", class: "action" %>
-    </div>
+      <tr class="field">
+        <th><%= form.label :プロフィール写真 %></th>
+        <td><%= form.file_field :image, id: :user_image %></td>
+        <td><%= form.hidden_field :image_cache %></td>
+      </tr>
+    
+      <tr class="field">
+        <th><%= form.label :パスワード %></th>
+        <td><%= form.password_field :password, id: :user_password %></td>
+      </tr>
+      
+      <tr class="field">
+        <th><%= form.label :パスワード確認 %></th>
+        <td><%= form.password_field :password_confirmation, id: :user_password %></td>
+       </tr>
+    
+      <p>
+        <div class="actions">
+        <%= form.submit "新規登録　送信>>", class: "action" %>
+        </div>
+      </p>
+    </table>
   </section>
 <% end %>

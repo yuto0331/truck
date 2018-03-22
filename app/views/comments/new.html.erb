@@ -1,5 +1,7 @@
-<h1>New Comment</h1>
+<section class = "comment_room" >
+<h1 id="comment_new">口コミ</h1>
 
 <%= render 'form', comment: @comment %>
+<%= link_to 'Back', comments_path(restaurant_id: @restaurant.id) %>
 
-<%= link_to 'Back', comments_path %>
+</section>

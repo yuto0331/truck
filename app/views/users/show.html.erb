@@ -1,4 +1,4 @@
-<section class = "mypage_show">
+<section class = "user">
   <p id="notice"><%= notice %></p>
   <p id = "mypage">
     <%= link_to image_tag(@user.image, class: 'user_image'), edit_user_path(@user) %> 
@@ -8,11 +8,14 @@
     <%= @user.name %>のお気に入り一覧
     </h1>
   </p>
-  <div class="list">
+  <div class="favorites">
     <% @user.favorite_restaurants.each do |restaurant| %>
-      <ul>
-          <li>店名：<%= restaurant.name %>場所：<%= restaurant.place %></li>
-      </ul>
+      <table>
+        <tr>
+          <td><%= link_to image_tag(restaurant.image, class: "favotite_image"), restaurant %></td>
+          <td>店名：<%= restaurant.name %>場所：<%= restaurant.place %></td>
+        </tr>
+      </table>
     <% end %>
   </div>
   

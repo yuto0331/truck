@@ -1,3 +1,109 @@
 // Place all the styles related to the comments controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+//new
+
+.comment_room {
+  // background: #f8f8f8;     後で同じグレーに戻す
+   background: #FFF0F5;
+}
+
+#comment_new {
+  text-align: center;
+}
+
+// section .restaurant_input .field{
+//   background-color: red;
+// }
+
+// section .restaurant_input .field td{
+//   width: 20rem;
+//   height: 5rem;
+//   background-color: #CCFFFF;
+//   text-align: left;
+//   vertical-align: top;
+// }
+
+// section .restaurant_input .field textarea {
+//   width: 600px;
+//   height: 100px;
+//   padding: 5px;
+// }
+
+// index
+
+#comment_index {
+  text-align: center;
+  margin: 20px ;
+}
+
+
+.img01.waku03 {
+  border: 10px solid #fff;
+  box-shadow: 0 0 0 1px #ccc,1px 3px 8px 0 rgba(40,40,40,0.3);
+}
+.waku03.rotate01 {
+  -moz-transform:rotate(-3deg);
+  -webkit-transform:rotate(-3deg);
+  -ms-transform:rotate(-3deg);
+  transform:rotate(-3deg);
+}
+.waku03.rotate02 {
+  -moz-transform:rotate(1deg);
+  -webkit-transform:rotate(1deg);
+  -ms-transform:rotate(1deg);
+  transform:rotate(1deg);
+}
+
+#comment_index_btn{
+  display: inline-block;
+  width: 200px;
+  line-height: 80px;
+  background: #CCCCCC;
+  text-align: center;
+  color: #FF3366;
+  border-radius: 50px;
+  opacity: 0.9;
+  margin-bottom: 0;
+}
+#comment_index_btn:hover{
+  opacity: 1;
+}
+
+#comment_index_back_btn {
+    display: inline-block;
+    text-decoration: none;
+    background: #ff8181;
+    color: #FFF;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 50%;
+    text-align: center;
+    font-weight: bold;
+    vertical-align: middle;
+    // overflow: hidden;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+    border-bottom: solid 3px #bd6565;
+    transition: .4s;
+}
+
+#comment_index_back_btn:active{
+    -ms-transform: translateY(2px);
+    -webkit-transform: translateY(2px);
+    transform: translateY(2px);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
+    border-bottom: none;
+}
+
+.comment {
+  float: left;
+  color: red;
+  margin: 0;
+  padding: 0;
+  width: 266px;
+  text-align: center;
+}
+
+

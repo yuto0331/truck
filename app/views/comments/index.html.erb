@@ -1,40 +1,28 @@
+<section class = "comment_room">
 <p id="notice"><%= notice %></p>
 
-<h1>皆の食べたもの</h1>
-
-<table>
-  <!--<thead>-->
-  <!--  <tr>-->
-  <!--    <th>Restaurant</th>-->
-  <!--    <th>User</th>-->
-  <!--    <th>Menu</th>-->
-  <!--    <th>Comment</th>-->
-  <!--    <th>Takeout</th>-->
-  <!--    <th>Image</th>-->
-  <!--    <th colspan="3"></th>-->
-  <!--  </tr>-->
-  <!--</thead>-->
-
-  <tbody>
-      
+<h1 id="comment_index">皆の食べたもの</h1>
+ 
+   <div class="comment_contailner clearfix"> 
     <% @comments.each do |comment| %>
-      <tr>
-      
+  
         <% if @restaurant.id == comment.restaurant_id  %>
-        <td><%= comment.restaurant_id %></td>
-        <td><%= comment.user_id %></td>
-        <td><%= comment.menu %></td>
-        <td><%= comment.comment %></td>
-        <td><%= comment.takeout %></td>
-        <td><%= image_tag comment.image %></td>
-        <td><%= link_to 'Show', comment_path(comment) %></td>
-        <td><%= link_to 'Edit', edit_comment_path(comment) %></td>
-        <td><%= link_to 'Destroy', comment_path(comment), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <div class="comment">
+        <%= link_to image_tag(comment.image, :size =>'150x150', class: "img01 waku03 shadow rotate01"), comment_path(comment) %>
+        <br><%= comment.menu %>
+        <br><%= comment.comment %>
+        <br><%= comment.takeout %>
+        </div>
+        <!--<td><%#= link_to 'Show', comment_path(comment) %></td>-->
+        <!--<td><%#= link_to 'Edit', edit_comment_path(comment) %></td>-->
+        <!--<td><%#= link_to 'Destroy', comment_path(comment), method: :delete, data: { confirm: 'Are you sure?' } %></td>-->
         <% end %>
-      </tr>
+     
     <% end %>
-  </tbody>
-</table>
+   </div>
+   
+
 <br>
 
-<%= link_to 'New Comment', new_comment_path(restaurant_id: @restaurant.id) %>
+<%= link_to '食べたメニューを投稿', new_comment_path(restaurant_id: @restaurant.id), id:"comment_index_btn" %>
+<%= link_to '←', restaurants_path, id:"comment_index_back_btn" %>

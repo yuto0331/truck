@@ -11,23 +11,27 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :image %>
-    <%= form.file_field :image, id: :restaurant_image %>
-    <%= form.hidden_field :image_cache %>
-  </div>
-
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name, id: :restaurant_name %>
-  </div>
-
-  <div class="field">
-    <%= form.label :place %>
-    <%= form.text_field :place, id: :restaurant_place %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+  <section class = "restaurant_input">
+   <table border = 2> 
+    <tr class="field">
+      <td><%= form.label :お店の外観 %></td>
+      <td><%= form.file_field :image, id: :restaurant_image %></td>
+      <td><%= form.hidden_field :image_cache %></td>
+    </tr>
+  
+    <tr class="field">
+      <td><%= form.label :お店の名前 %></td>
+      <td><%= form.text_field :name, id: :restaurant_name %></td>
+    </tr>
+  
+    <tr class="field">
+      <td><%= form.label :　県名 %></td>
+      <td><%= form.text_field :place, id: :restaurant_place %></td>
+    </tr>
+  
+    <tr class="actions">
+      <%= form.submit %>
+    </tr>
+  </table>
+  </section>
 <% end %>

@@ -3,30 +3,32 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-// show
+
+
+.user {
+  background: #f8f8f8;
+}
+
+//new
 
 
 
+#user_new {
+  text-align: center;
+}
 
 
-section .mypage_show {
+//index
+
+.input {
+  padding: 100px;
+}
+
+
+section .user {
   background: #f8f8f8;
  
 }
-
-#mypage {
-  margin: 10px 50px;
-}
-
-.list {
-  float: left;
-  width: 100%;
-  height: 500px  ;
-  margin: 0 300px;
-  padding-right: 40px;
-  overflow: scroll;
-}
-
 
 
 #user_restaurant_btn {
@@ -44,4 +46,29 @@ section .mypage_show {
 #user_restaurant_btn:hover{
   opacity: 1;
 }
-  
+
+
+// show
+#mypage {
+  margin: 10px 50px;
+}
+
+.favotite_image {
+  width: 100px;
+  height: 100px;  
+}
+
+.favorites {
+  float: left;
+  width: 650px;
+  height: 300px;
+  margin: 0 50px;
+  overflow: scroll;
+  padding: 0 50px;
+}
+
+
+
+
+
+
