@@ -31,8 +31,8 @@
 </p>
 
   <% if current_user.id == @comment.user_id %>
-    <%= link_to 'Edit', edit_comment_path(@comment) %>
-    <!--<%# binding.pry %>-->
+    <%= link_to '編集', edit_comment_path(@comment), class:"origin_edit_btn" %>
+　  <%= link_to '削除', comment_path(@comment), class:"origin_edit_btn", method: :delete, data: { confirm: '削除していいですか？' }  %>
   <% end %>
   
   

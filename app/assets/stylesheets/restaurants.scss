@@ -128,7 +128,7 @@ container .restaurant_show{
   opacity: 1;
 }
 
-#restaurant_show_edit_btn {
+.origin_edit_btn {
   display: inline-block;
   text-decoration: none;
   color: #668ad8;
@@ -148,12 +148,19 @@ container .restaurant_show{
   margin: 5px;
 }
 
-#restaurant_show_edit_btn:hover {
+.origin_edit_btn:hover {
     background: #b3e1ff;
 }
 
-.resutaurant_index_new {
+.restaurant_index_new {
   margin: 50px 250px 10px 250px;
 }
+
+// index
+#restaurant_edit {
+  text-align: center;
+  margin: 20px ;
+}
+
 
 

@@ -66,7 +66,7 @@ class CommentsController < ApplicationController
   def destroy
     @comment.destroy
     respond_to do |format|
-      format.html { redirect_to comments_path(restaurant_id: @comment.restaurant.id), notice: 'Comment was successfully destroyed.' }
+      format.html { redirect_to comments_path(restaurant_id: @comment.restaurant.id), notice: '口コミを削除しました' }
       format.json { head :no_content }
     end
   end

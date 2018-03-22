@@ -35,8 +35,8 @@
     
   <section>
     <% if current_user.id == @restaurant.user_id %>
-      <P><%= link_to '編集', edit_restaurant_path(@restaurant), id:"restaurant_show_edit_btn" %></P>
-      <P><%= link_to '削除', restaurant_path(@restaurant), id:"restaurant_show_edit_btn", method: :delete, data: { confirm: 'Are you sure?' } %></P>
+      <P><%= link_to '編集', edit_restaurant_path(@restaurant), class:"origin_edit_btn" %></P>
+      <P><%= link_to '削除', restaurant_path(@restaurant), class:"origin_edit_btn", method: :delete, data: { confirm: 'Are you sure?' } %></P>
     <% end %>
     <%= link_to '←', restaurants_path, class:"origin_back_btn" %>
   </section>
