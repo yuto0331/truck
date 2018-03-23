@@ -1,6 +1,6 @@
 class Bath < ApplicationRecord
-    has_many :preference, dependent: :destroy
+    has_many :preferences, dependent: :destroy
     belongs_to :user
-    has_many :preference_users, through: :preference, source: :user
+    # has_many :preference_users, through: :preferences, source: :user
     mount_uploader :image, ImageUploader
 end

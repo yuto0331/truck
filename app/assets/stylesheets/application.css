@@ -15,7 +15,7 @@
  *= require font-awesome
  */
 
-/*? 動作確認中　*/
+/*? 動作確認中*/
 
 html {
   height: 100%;
@@ -27,9 +27,18 @@ body {
 
 .fullheight {
   height: 100%;
+  
 }
 
-
+.container {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  min-height: 100%;
+  width: auto;
+  background: #f8f8f8;
+  
+}
 
 
 
@@ -62,10 +71,6 @@ section{
   padding: 10px 0 180px 0;
 }
 
-section .container {
-  width: 50px;
-  margin: 0 auto;
-}
 
 h1 {
   margin: 0 100px;
@@ -89,7 +94,7 @@ header {
   background-color: #99CCCC;
 }
 
-header .container {
+header .header {
   width: 820px;
   margin: 0 auto;
   height: 50px;
@@ -191,6 +196,9 @@ header .container {
   background-color: #99CCCC;
   height: 50px;
   margin: 0;
+  position: absolute;
+  bottom: 0;
+  width: 800px;
   
 }
 

@@ -27,7 +27,7 @@ class BathsController < ApplicationController
   # POST /baths.json
   def create
     @bath = Bath.new(bath_params)
-    @batg.user_id = current_user.id
+    @bath.user_id = current_user.id
 
     respond_to do |format|
       if @bath.save
@@ -72,7 +72,7 @@ class BathsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def bath_params
-      params.require(:bath).permit(:user_id, :name, :place, :email, :content, :image)
+      params.require(:bath).permit(:user_id, :name, :place, :content, :image)
     end
     
     def current_user_login

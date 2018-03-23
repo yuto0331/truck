@@ -1,7 +1,5 @@
-<section class = "user">
-  <h1 id="user_new">新規登録</h1>
+<h1 id="user_new">新規登録</h1>
   
-  <%= render 'form', user: @user %>
+<%= render 'form', user: @user %>
   
-  <%= link_to '戻る', root_url, id: "user_restaurant_btn" %>
-</section>
+<%= link_to '←', root_url, class: "origin_back_btn" %>

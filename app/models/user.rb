@@ -12,4 +12,6 @@ class User < ApplicationRecord
     has_many :comments
     has_many :baths
     has_many :preference_baths, through: :preferences, source: :bath
+    has_many :preferences, dependent: :destroy
+
 end

@@ -9,6 +9,7 @@
   </head>
 
   <body>
+    <div class="container">
     
     <% flash.each do |key, value| %>             
       <%= content_tag(:div, value, class: "#{key}") %>
@@ -17,9 +18,9 @@
     
     <header>
       <!--<a class="header-logo" href="" >DriveStation</a>-->
-      　　<%= link_to 'DriveStation', restaurants_path, class: "header_logo" %>
-      　　<!--クラスを当てると飛ばなくなる　後で確認-->
-      <div class="container">
+        <%= link_to 'DriveStation', restaurants_path, class: "header_logo" %>
+        <!--クラスを当てると飛ばなくなる.後で確認-->
+      <div class="header">
         <% if logged_in? %>
           <%= link_to "私のお気に入り", user_path(current_user.id), class: "header_tag" %>
           <%= link_to '食事処一覧', restaurants_path, class: "header_tag" %>
@@ -39,6 +40,7 @@
       <p>DIC 2017年10月期 </p>
     </footer>
     
+     </div>
     </div>
   </body>
   

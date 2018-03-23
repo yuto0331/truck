@@ -15,10 +15,6 @@
   <%= @bath.place %>
 </p>
 
-<p>
-  <strong>Email:</strong>
-  <%= @bath.email %>
-</p>
 
 <p>
   <strong>Content:</strong>
@@ -29,6 +25,18 @@
   <strong>Image:</strong>
   <%= @bath.image %>
 </p>
+
+<div class ="#">
+  <% unless @bath.user == current_user %>
+    <% if @preference.present? %>
+      <%= link_to 'お気に入り解除', preference_path(bath_id: @bath.id), method: :delete, class: 'restaurant_show_favorote' %>
+    <% else %>
+      <%= link_to 'お気に入り登録', preferences_path(bath_id: @bath.id), method: :post, class: 'restaurant_show_favorote' %>
+    <% end %>
+  <% end %>
+</div>
+
+
 
 <%= link_to 'Edit', edit_bath_path(@bath) %> |
 <%= link_to 'Back', baths_path %>

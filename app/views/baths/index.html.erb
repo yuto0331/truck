@@ -9,7 +9,6 @@
       <th>User</th>
       <th>Name</th>
       <th>Place</th>
-      <th>Email</th>
       <th>Content</th>
       <th>Image</th>
       <th colspan="3"></th>
@@ -19,12 +18,12 @@
   <tbody>
     <% @baths.each do |bath| %>
       <tr>
-        <td><%= bath.user_id %></td>
+        <td><%= image_tag(bath.image class="bath_image") %></td>
         <td><%= bath.name %></td>
         <td><%= bath.place %></td>
-        <td><%= bath.email %></td>
+     
         <td><%= bath.content %></td>
-        <td><%= bath.image %></td>
+       
         <td><%= link_to 'Show', bath %></td>
         <td><%= link_to 'Edit', edit_bath_path(bath) %></td>
         <td><%= link_to 'Destroy', bath, method: :delete, data: { confirm: 'Are you sure?' } %></td>

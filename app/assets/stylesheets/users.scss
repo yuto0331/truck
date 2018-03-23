@@ -5,9 +5,9 @@
 
 
 
-.user {
-  background: #f8f8f8;
-}
+  // backgroundはデフォルトでapplication.cssに書いている
+
+
 
 //new
 
@@ -20,32 +20,6 @@
 
 //index
 
-.input {
-  padding: 100px;
-}
-
-
-section .user {
-  background: #f8f8f8;
- 
-}
-
-
-// #user_restaurant_btn {
-//   display: inline-block;
-//   width: 100px;
-//   line-height: 50px;
-//   background: #CCCCCC;
-//   text-align: center;
-//   color: #FF3366;
-//   border-radius: 50px;
-//   opacity: 0.5;
-//   margin-bottom: 0;
-// }
-
-// #user_restaurant_btn:hover{
-//   opacity: 1;
-// }
 
 
 // show
@@ -61,9 +35,9 @@ section .user {
 .favorites {
   float: left;
   width: 650px;
-  height: 300px;
+  // height: 500px;
   margin: 0 50px;
-  overflow: scroll;
+  // overflow: scroll;
   padding: 0 50px;
 }
 
