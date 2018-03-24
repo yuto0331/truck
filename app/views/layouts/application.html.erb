@@ -17,9 +17,10 @@
     <!--上記はフラッシュメッセージがあった場合の表示用 ログインシステム10-->
     
     <header class="header clearfix">
-      <!--<a class="header-logo" href="" >DriveStation</a>-->
-        <%= link_to 'DriveStation', root_url, class: "header_logo" %>
+      <ul>
+        <li><%= link_to 'DriveStation', root_url, class: "header_logo" %></li>
         <!--クラスを当てると飛ばなくなる.後で確認-->
+      </ul>
       <ul>
         <% if logged_in? %>
           <li><%= link_to "お気に入り", user_path(current_user.id), class: "header_tag" %></li>

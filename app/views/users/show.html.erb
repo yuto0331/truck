@@ -1,14 +1,12 @@
-<iv class = "restaurant_room clearfix fullheight" >
+<section class = "restaurant_room clearfix fullheight" >
   <p id="notice"><%= notice %></p>
-  <div id = "mypage">
-    <%= link_to image_tag(@user.image, id: 'user_image'), edit_user_path(@user) %> 
-  
-  
-  <p>
-    <h1 id="user_show_title">
-    <%= @user.name %>のお気に入り一覧
-    </h1>
-  </p>
+  <div id="mypage">
+      <%= link_to image_tag(@user.image, id: 'user_image'), edit_user_path(@user) %> 
+    <p>
+      <h1 id="user_show_title">
+      <%= @user.name %>のお気に入り一覧
+      </h1>
+    </p>
   </div>
   
   
@@ -44,4 +42,4 @@
   
 <%= link_to '←', root_url, class: "origin_back_btn show_btn" %>
 
-</div>
+</section>
