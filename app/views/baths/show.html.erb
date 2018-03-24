@@ -1,32 +1,22 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>User:</strong>
-  <%= @bath.user_id %>
+  <%= image_tag @bath.image, class:"bath_show_image" %>
 </p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @bath.name %>
-</p>
+<div class="bath_show_content">
+  <p>
+    <strong>地域:</strong>
+    <%= @bath.place %>
+  </p>
+  <p>
+    <strong>コメント:</strong>
+    <%= @bath.content %>
+  </p>
+</div>
 
-<p>
-  <strong>Place:</strong>
-  <%= @bath.place %>
-</p>
-
-
-<p>
-  <strong>Content:</strong>
-  <%= @bath.content %>
-</p>
-
-<p>
-  <strong>Image:</strong>
-  <%= @bath.image %>
-</p>
-
-<div class ="#">
+<div class ="bath_show">
+  <p class = "bath_show_preference">
   <% unless @bath.user == current_user %>
     <% if @preference.present? %>
       <%= link_to 'お気に入り解除', preference_path(bath_id: @bath.id), method: :delete, class: 'restaurant_show_favorote' %>
@@ -34,9 +24,11 @@
       <%= link_to 'お気に入り登録', preferences_path(bath_id: @bath.id), method: :post, class: 'restaurant_show_favorote' %>
     <% end %>
   <% end %>
+  <% if current_user.id == @bath.user_id %>
+    <%= link_to '編集', edit_bath_path(@bath), class:"origin_edit_btn" %>
+  　<%= link_to '削除', bath_path(@bath), class:"origin_edit_btn", method: :delete, data: { confirm: '削除していいですか？' }  %>
+  <% end %>
+  </p>
 </div>
 
-
-
-<%= link_to 'Edit', edit_bath_path(@bath) %> |
-<%= link_to 'Back', baths_path %>
+<%= link_to '←', baths_path, class:"origin_back_btn"  %>

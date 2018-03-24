@@ -5,24 +5,20 @@
     <%= image_tag @restaurant.image, class: "restaurant_show_image" %>
   </p>
 
-  <container class="restaurant_show clearfix">
-    <div class="restaurant_name">
-    <p>
-      <strong>店名</strong>
-      <%= @restaurant.name %>
-    </p>
-    
-    <p>
-      <strong>県名:</strong>
-      <%= @restaurant.place %>
-    </p>
-    
-    <p>
-      <strong>投稿者:</strong>
-      <%=  @restaurant.user.name %>さん
-    </p>
-
-  
+   <div class="restaurant_contailner clearfix"> 
+    <!--<div class="restaurant_show_name">-->
+      <p>
+        <strong>店名</strong>
+        <%= @restaurant.name %>
+      </p>
+      <p>
+        <strong>県名:</strong>
+        <%= @restaurant.place %>
+      </p>
+      <p>
+        <strong>投稿者:</strong>
+        <%=  @restaurant.user.name %>さん
+      </p>
     <div class ="favorite_btn">
     <% unless @restaurant.user == current_user %>
       <% if @favorite.present? %>
@@ -33,16 +29,14 @@
     <% end %>
     </div>
     
-  <section>
-    <% if current_user.id == @restaurant.user_id %>
-      <P><%= link_to '編集', edit_restaurant_path(@restaurant), class:"origin_edit_btn" %></P>
-      <P><%= link_to '削除', restaurant_path(@restaurant), class:"origin_edit_btn", method: :delete, data: { confirm: 'Are you sure?' } %></P>
-    <% end %>
-    <%= link_to '←', restaurants_path, class:"origin_back_btn" %>
-  </section>
-
+      <div>
+        <% if current_user.id == @restaurant.user_id %>
+          <P><%= link_to '編集', edit_restaurant_path(@restaurant), class:"origin_edit_btn" %></P>
+          <P><%= link_to '削除', restaurant_path(@restaurant), class:"origin_edit_btn", method: :delete, data: { confirm: 'Are you sure?' } %></P>
+        <% end %>
+        <%= link_to '←', restaurants_path, class:"origin_back_btn" %>
+      </div>
+    <!--</div>-->
   </div>
-    <%= link_to 'クチコミを見る', comments_path(restaurant_id: @restaurant.id), class:"origin_next_btn" %> 
-  </container>
-  
+      <%= link_to '皆の食べたものを見る', comments_path(restaurant_id: @restaurant.id), class:"origin_next_btn center_btn" %> 
 </section>

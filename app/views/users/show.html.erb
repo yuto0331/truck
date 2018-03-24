@@ -1,23 +1,44 @@
   <p id="notice"><%= notice %></p>
-  <p id = "mypage">
-    <%= link_to image_tag(@user.image, class: 'user_image'), edit_user_path(@user) %> 
-  </p>
+  <div id = "mypage">
+    <%= link_to image_tag(@user.image, id: 'user_image'), edit_user_path(@user) %> 
+  
+  
   <p>
-    <h1>
+    <h1 id="user_show_title">
     <%= @user.name %>のお気に入り一覧
     </h1>
   </p>
-  <%= link_to '食事処を探す', restaurants_path, class: "origin_next_btn user_show_index" %>
-  <%= link_to 'お風呂を探す', baths_path, class: "origin_next_btn user_show_index" %>
-  <div class="favorites">
-    <% @user.favorite_restaurants.each do |restaurant| %>
-      <table>
-        <tr>
-          <td><%= link_to image_tag(restaurant.image, class: "favotite_image"), restaurant %></td>
-          <td>店名：<%= restaurant.name %><br>場所：<%= restaurant.place %></td>
-        </tr>
-      </table>
-    <% end %>
   </div>
+  
+  
+  <section class = "bath_preferences_index">
+    <%= link_to 'お風呂を探す', baths_path, class: "origin_next_btn user_show_bath_index" %>
+    
+      <div class="preference">
+        <% @user.preference_baths.each do |bath| %>
+          <table>
+            <tr>
+              <td><%= link_to image_tag(bath.image, class: "preference_image"), bath %></td>
+              <td>店名：<%= bath.name %><br>場所：<%= bath.place %></td>
+            </tr>
+          </table>
+        <% end %>
+      </div>
+    </section>
 
+  <section class = "restaurant_favorites_index">
+    <%= link_to '食事処を探す', restaurants_path, class: "origin_next_btn user_show_restaurant_index" %>
+  
+      <div class="favorites">
+        <% @user.favorite_restaurants.each do |restaurant| %>
+          <table>
+            <tr>
+              <td><%= link_to image_tag(restaurant.image, class: "favotite_image"), restaurant %></td>
+              <td>店名：<%= restaurant.name %><br>場所：<%= restaurant.place %></td>
+            </tr>
+          </table>
+        <% end %>
+      </div>
+  </section>
+  
 <%= link_to '←', root_url, class: "origin_back_btn show_btn" %>

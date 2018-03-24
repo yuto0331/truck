@@ -24,13 +24,73 @@
 
 // show
 #mypage {
-  margin: 10px 50px;
+  margin: 0 0 50px 100px;
+  padding: 50px;
 }
+
+#user_image {
+  border-radius: 50%;
+  float:left;
+  width: 100px;
+  height: 100px ;
+  margin: 0px;
+}
+
+#user_show_title{
+  padding: 20px 0 0 50px;
+}
+
+
+
+// お風呂を探す
+
+.bath_preferences_index {
+  float:left;
+  width: 400px;
+}
+
+.user_show_bath_index{
+  margin: 0 50px;
+  display: block;
+}
+
+
+.preference_image {
+  width: 100px;
+  height: 100px;  
+}
+
+.preference {
+  float: right;
+  width: 650px;
+  // height: 500px;
+  margin: 0 50px;
+  // overflow: scroll;
+  padding: 0 50px;
+}
+
+
+// 食事処を探す
+
+.restaurant_favorites_index {
+  float: left;
+  width: 338px;
+
+}
+
+.user_show_restaurant_index{
+  margin: 0 50px;
+  display: block;
+}
+
+
 
 .favotite_image {
   width: 100px;
   height: 100px;  
+  
 }
+
 
 .favorites {
   float: left;
@@ -51,4 +111,6 @@
 
 .user_show_index {
   margin: 0 250px 0 250px;
+  display: block;
 }
+

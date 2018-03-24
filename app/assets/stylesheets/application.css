@@ -74,7 +74,7 @@ section{
 
 h1 {
   margin: 0 100px;
-  height: 100px;
+  /*height: 100px;*/
 }
 
 .clearfix:after {
@@ -89,7 +89,8 @@ h1 {
 
 
 header {
-  /*background: url('sirokuro.JPG');*/
+  /*background: 
+  url('sirokuro.JPG');*/
   /*background-size: cover;*/
   background-color: #99CCCC;
 }
@@ -159,12 +160,6 @@ header .header {
     transition: .4s;
 }
 
-.user_image {
-  border-radius: 50%;
-  float:left;
-  width: 100px;
-  height: 100px;
-}
 
 .field {
   width: 100%;

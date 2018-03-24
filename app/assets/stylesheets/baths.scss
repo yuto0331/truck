@@ -20,6 +20,49 @@
   text-align: center;
 }
 
+#bath_index_sub {
+ text-align: center;
+ display: block;
+ font-size: 13px;
+ color: #aaa;
+ padding-top: 10px;
+ margin: 0 0 100px 0;
+}
+
+.bath {
+  background: #fff;
+  width: 250px;
+  box-sizing: border-box;
+  position: relative; 
+  float: left;
+  margin: 5px;
+  margin-bottom: 40px;
+  padding: 40px 0px 0px 50px;
+}
+
+.bath .bath_image {
+  border-radius: 50%;
+  float:left;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: -60px;
+  left: 0;
+  right: 50;
+  margin: 15px 0;
+}
+
+// .bath_name {
+// text-align: center;
+//   margin: 0 ;
+// }
+
+
+
+
+
+
+
 //new
 
 .bath_index_new {
@@ -28,4 +71,27 @@
 
 #bath_new {
   text-align: center;
+}
+
+// show
+.bath_show_image {
+  display: inline-block;
+	box-shadow: 0px 0px 25px -5px rgba(0, 0, 0, 0.8);
+	width: 598px;
+	height: 300pxk;
+	margin: 100px;
+	padding: 0;
+}
+
+.bath_show {
+  height: 150px;
+}
+
+.bath_show_preference{
+  margin: 10px 0 0 30px;
+  padding: 0 auto;
+}
+
+.bath_show_content {
+  margin: 50px;
 }

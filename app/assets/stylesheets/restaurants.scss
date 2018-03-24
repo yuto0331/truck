@@ -38,7 +38,16 @@ section .restaurant_input .field textarea {
 
 #restaurant_index{
   text-align: center;
-  margin: 20px ;
+  margin: 20px 20px 0 20px ;
+}
+
+#restaurant_index_sub {
+ text-align: center;
+ display: block;
+ font-size: 13px;
+ color: #aaa;
+ padding-top: 10px;
+ margin: 0 0 100px 0;
 }
 
 .restaurant .restaurant_image {
@@ -61,16 +70,28 @@ section .restaurant_input .field textarea {
   float: left;
   margin: 5px;
   margin-bottom: 20px;
-  padding: 20px 20px 20px 50px;
+  padding: 40px 0px 0px 50px;
 }
 
 .restaurant h3{
- text-align: center;
+ text-align: left;
 }
 
 .restaurant_index_new {
   margin: 50px 250px 10px 250px;
 }
+
+.index_content {
+  display: block;
+  
+}
+
+.restaurant_name {
+text-align: left;
+  margin: 0 ;
+}
+
+
 
 
 // show
@@ -80,10 +101,6 @@ section .restaurant_input .field textarea {
   margin: 0 80px;
 }
 
-.restaurant_name {
-  float: left;
-  margin: 0 50px 0 50px;
-}
 
 
 .restaurant_show_favorote {
@@ -101,16 +118,16 @@ section .restaurant_input .field textarea {
     color: white;
 }
 
-container .restaurant_show{
+.restaurant_contailner .restaurant_show_name{
   float: left;  
 }
 
-.restaurant_show {
-  float: left;
+.center_btn {
+ margin: 0 200px;
 }
-.favorite_btn{
-  float: left;  
-}
+
+
+
 
 //new?
 

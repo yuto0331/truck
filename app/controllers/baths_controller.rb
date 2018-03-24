@@ -31,7 +31,7 @@ class BathsController < ApplicationController
 
     respond_to do |format|
       if @bath.save
-        format.html { redirect_to @bath, notice: 'Bath was successfully created.' }
+        format.html { redirect_to @bath, notice: 'お風呂情報が投稿されました' }
         format.json { render :show, status: :created, location: @bath }
       else
         format.html { render :new }

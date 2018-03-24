@@ -1,6 +1,7 @@
-<h1>Editing Bath</h1>
+<section class = "bath_room fullheight" >
+<h1 id="bath_edit" >お風呂屋の編集</h1>
 
 <%= render 'form', bath: @bath %>
 
-<%= link_to 'Show', @bath %> |
-<%= link_to 'Back', baths_path %>
+<%= link_to '←',@bath, class:"origin_back_btn" %>
+</section>

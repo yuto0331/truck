@@ -17,23 +17,24 @@
   <!--</div>-->
 
   <div class="field">
-    <%= form.label :image %>
+    <%= form.label :写真 %>
     <%= form.file_field :image, id: :bath_image %>
     <%= form.hidden_field :image_cache %>
   </div>
 
   <div class="field">
-    <%= form.label :name %>
+    <%= form.label :店名（お風呂屋）） %>
     <%= form.text_field :name, id: :bath_name %>
   </div>
 
   <div class="field">
-    <%= form.label :place %>
-    <%= form.text_field :place, id: :bath_place %>
+    <%= form.label :地域 %>
+    <%= form.select :place, [["東北", "東北"], ["関東 ", "関東"], ["中部", "中部"], ["近畿", "近畿"], ["中国", "中国"], ["四国", "四国"], ["九州", "九州"],] ,class:"area" %>
+    
   </div>
 
   <div class="field">
-    <%= form.label :content %>
+    <%= form.label :お風呂情報 %>
     <%= form.text_area :content, id: :bath_content %>
   </div>
   
