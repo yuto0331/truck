@@ -14,25 +14,24 @@
     </div>
   <% end %>
   
-  <section class="input">
-    <table border="1"> 
-    <!--後でborderは消す-->
+  <section class="name_input">
+    <table class="input">
       <tr class="field">
         <th><%= form.label :お名前 %></th>
         <td><%= form.text_field :name, id: :user_name %></td>
       </tr>
-     
+      
       <tr class="field">
         <th><%= form.label :アドレス %></th>
         <td><%= form.text_field :email, id: :user_email %></td>
       </tr>
-    
+      
       <tr class="field">
         <th><%= form.label :プロフィール写真 %></th>
-        <td><%= form.file_field :image, id: :user_image %></td>
+        <td><%= form.file_field :image, id: :user_image_input %></td>
         <td><%= form.hidden_field :image_cache %></td>
       </tr>
-    
+      
       <tr class="field">
         <th><%= form.label :パスワード %></th>
         <td><%= form.password_field :password, id: :user_password %></td>
@@ -41,13 +40,14 @@
       <tr class="field">
         <th><%= form.label :パスワード確認 %></th>
         <td><%= form.password_field :password_confirmation, id: :user_password %></td>
-       </tr>
-    
-      <p>
-        <div class="actions">
-        <%= form.submit "新規登録　送信>>", class: "action" %>
-        </div>
-      </p>
+      </tr>
     </table>
+  
+  <p>
+  <div class="actions">
+    <%= form.submit "新規登録　送信>>", class: "action" %>
+  </div>
+  </p>
+  
   </section>
 <% end %>
