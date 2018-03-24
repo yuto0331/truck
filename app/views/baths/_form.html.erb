@@ -16,29 +16,60 @@
   <!--  <%#= form.number_field :user_id, id: :bath_user_id %>-->
   <!--</div>-->
 
-  <div class="field">
-    <%= form.label :写真 %>
-    <%= form.file_field :image, id: :bath_image %>
-    <%= form.hidden_field :image_cache %>
-  </div>
-
-  <div class="field">
-    <%= form.label :店名（お風呂屋）） %>
-    <%= form.text_field :name, id: :bath_name %>
-  </div>
-
-  <div class="field">
-    <%= form.label :地域 %>
-    <%= form.select :place, [["東北", "東北"], ["関東 ", "関東"], ["中部", "中部"], ["近畿", "近畿"], ["中国", "中国"], ["四国", "四国"], ["九州", "九州"],] ,class:"area" %>
-    
-  </div>
-
-  <div class="field">
-    <%= form.label :お風呂情報 %>
-    <%= form.text_area :content, id: :bath_content %>
-  </div>
+  <!--<div class="item_space">-->
+  <!--<ul>-->
+  <!--  <li class="bath_new_input">-->
+  <!--    <%#= form.label :写真 %>-->
+  <!--    <%#= form.file_field :image, id: :bath_image, class: "input_item" %>-->
+  <!--    <%#= form.hidden_field :image_cache %>-->
+  <!--  </li>-->
   
-  <div class="actions">
-    <%= form.submit %>
+  <!--  <li class="bath_new_input">-->
+  <!--    <%#= form.label :店名（お風呂屋）） %>-->
+  <!--    <%#= form.text_field :name, id: :bath_name, class: "input_item" %>-->
+  <!--  </li>-->
+  
+  <!--  <li class="bath_new_input">-->
+  <!--    <%#= form.label :地域 %>-->
+  <!--    <%#= form.select :place, [["東北", "東北"], ["関東 ", "関東"], ["中部", "中部"], ["近畿", "近畿"], ["中国", "中国"], ["四国", "四国"], ["九州", "九州"],] , class: "input_item" %>-->
+      
+  <!--  </li>-->
+  
+  <!--  <li class="bath_new_input">-->
+  <!--    <%#= form.label :お風呂情報 %>-->
+  <!--    <%#= form.text_area :content, id: :bath_content, class: "input_item" %>-->
+  <!--  </li>-->
+    
+  <!--  <li class="actions">-->
+  <!--    <%#= form.submit %>-->
+  <!--  </li>-->
+  <!--</ul>-->
+  <!--</div>-->
+  <div class="item_space">
+    <ul>
+      <li class="bath_new_input">
+        <%= form.label :→ %>
+        <%= form.file_field :image, id: :bath_image %>
+        <%= form.hidden_field :image_cache %>
+      </li>
+    
+      <li class="bath_new_input">
+        <%= form.select :place, [["東北", "東北"], ["関東 ", "関東"], ["中部", "中部"], ["近畿", "近畿"], ["中国", "中国"], ["四国", "四国"], ["九州", "九州"],]  %>
+        
+      </li>
+      
+      <li class="bath_new_input">
+        <%= form.text_field :name, id: :bath_name, :placeholder => "お風呂屋さんの名前..." %>
+      </li>
+    
+      <li class="bath_new_input">
+        <%= form.text_area :content, id: :bath_content, :placeholder => "行ってみた感想..." %>
+      </li>
+      
+      <li class="actions">
+        <%= form.submit "投稿" %>
+      </li>
+    </ul>
   </div>
+ 
 <% end %>

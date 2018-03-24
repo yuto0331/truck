@@ -16,20 +16,21 @@
     <% end %>
     <!--上記はフラッシュメッセージがあった場合の表示用 ログインシステム10-->
     
-    <header>
+    <header class="header clearfix">
       <!--<a class="header-logo" href="" >DriveStation</a>-->
-        <%= link_to 'DriveStation', restaurants_path, class: "header_logo" %>
+        <%= link_to 'DriveStation', root_url, class: "header_logo" %>
         <!--クラスを当てると飛ばなくなる.後で確認-->
-      <div class="header">
+      <ul>
         <% if logged_in? %>
-          <%= link_to "私のお気に入り", user_path(current_user.id), class: "header_tag" %>
-          <%= link_to '食事処一覧', restaurants_path, class: "header_tag" %>
-          <%= link_to "ログアウト", session_path(current_user.id), method: :delete, class: "header_tag" %>
+          <li><%= link_to "お気に入り", user_path(current_user.id), class: "header_tag" %></li>
+          <li><%= link_to '食事処一覧', restaurants_path, class: "header_tag" %></li>
+          <li><%= link_to '温泉一覧', baths_path, class: "header_tag" %></li>
+          <li><%= link_to "ログアウト", session_path(current_user.id), method: :delete, class: "header_tag" %></li>
         <% else %>
-          <%= link_to "新規登録", new_user_path, class: "header_tag" %>
-          <%= link_to "ログイン", new_session_path, class: "header_tag" %>
+          <li><%= link_to "新規登録", new_user_path, class: "header_tag" %></li>
+          <li><%= link_to "ログイン", new_session_path, class: "header_tag" %></li>
         <% end %>
-      </div>  
+      </ul>  
     
     </header>
     

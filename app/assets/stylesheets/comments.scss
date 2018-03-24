@@ -2,39 +2,15 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-//new
+
+//new,index,show, 
 
 .comment_room {
   // background: #f8f8f8;     後で同じグレーに戻す
    background: #FFF0F5;
 }
 
-.container .comment_room {
-   background: #FFF0F5;
-  
-}
 
-#comment_new {
-  text-align: center;
-}
-
-// section .restaurant_input .field{
-//   background-color: red;
-// }
-
-// section .restaurant_input .field td{
-//   width: 20rem;
-//   height: 5rem;
-//   background-color: #CCFFFF;
-//   text-align: left;
-//   vertical-align: top;
-// }
-
-// section .restaurant_input .field textarea {
-//   width: 600px;
-//   height: 100px;
-//   padding: 5px;
-// }
 
 // index
 
@@ -94,3 +70,53 @@
 .commnet_index_new {
   margin: 100px 250px 0 250px;
 }
+
+//new
+
+.bath_new_input{
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+#comment_new {
+  text-align: center;
+  margin: 50px 0 100px 0;
+}
+
+#comment_new_image {
+  margin: 10px;
+}
+
+#comment_menu {
+  height: 50px;
+  width: 350px;
+}
+
+#comment_comment{
+  height: 80px;
+  width: 350px;
+}
+
+#comment_takeout {
+  height: 50px;
+  width: 350px;
+}
+
+
+// section .restaurant_input .field{
+//   background-color: red;
+// }
+
+// section .restaurant_input .field td{
+//   width: 20rem;
+//   height: 5rem;
+//   background-color: #CCFFFF;
+//   text-align: left;
+//   vertical-align: top;
+// }
+
+// section .restaurant_input .field textarea {
+//   width: 600px;
+//   height: 100px;
+//   padding: 5px;
+// }

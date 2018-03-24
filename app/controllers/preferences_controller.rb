@@ -1,6 +1,5 @@
 class PreferencesController < ApplicationController
   def create
-      binding.pry
       preference = current_user.preferences.create(bath_id: params[:bath_id])
       redirect_to baths_url, notice: "#{preference.bath.name}をお気に入り登録しました"
   end 

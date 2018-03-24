@@ -31,13 +31,13 @@
 #user_image {
   border-radius: 50%;
   float:left;
-  width: 100px;
-  height: 100px ;
+  width: 150px;
+  height: 150px ;
   margin: 0px;
 }
 
 #user_show_title{
-  padding: 20px 0 0 50px;
+  padding: 40px 0 0 60px;
 }
 
 
@@ -57,16 +57,17 @@
 
 .preference_image {
   width: 100px;
-  height: 100px;  
+  height: 100px;
+  margin: 5px;
 }
 
 .preference {
-  float: right;
-  width: 650px;
+  float: left;
+  width: 320px;
   // height: 500px;
-  margin: 0 50px;
+  margin: 0;
   // overflow: scroll;
-  padding: 0 50px;
+  padding: 0 0 0 80px;
 }
 
 
@@ -87,18 +88,18 @@
 
 .favotite_image {
   width: 100px;
-  height: 100px;  
-  
+  height: 100px; 
+  margin: 5px;
 }
 
 
 .favorites {
   float: left;
-  width: 650px;
+  width: 320px;
   // height: 500px;
-  margin: 0 50px;
+  margin: 0;
   // overflow: scroll;
-  padding: 0 50px;
+  padding: 0 80px;
 }
 
 .show_btn {

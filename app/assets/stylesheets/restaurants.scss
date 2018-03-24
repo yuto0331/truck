@@ -11,28 +11,57 @@
 
 //new
 
+#restaurant_image {
+  margin: 20px;
+}
+
 #restaurant_new {
   text-align: center;
+  margin: 50px 0 100px 0;
+}
+
+.restaurant_new_input{
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.item_space {
+  margin: 100px 200px;
+}
+
+#restaurant_name {
+  height: 50px;
+  width: 350px;
+}
+
+#restaurant_place {
+  height: 50px;
+  width: 350px;
+}
+
+#restaurant_ations {
+  
 }
 
 
-section .restaurant_input .field{
-  background-color: red;
-}
 
-section .restaurant_input .field td{
-  width: 20rem;
-  height: 5rem;
-  background-color: #CCFFFF;
-  text-align: left;
-  vertical-align: top;
-}
+// section .restaurant_input .field{
+//   background-color: red;
+// }
 
-section .restaurant_input .field textarea {
-  width: 600px;
-  height: 100px;
-  padding: 5px;
-}
+// section .restaurant_input .field td{
+//   width: 20rem;
+//   height: 5rem;
+//   background-color: #CCFFFF;
+//   text-align: left;
+//   vertical-align: top;
+// }
+
+// section .restaurant_input .field textarea {
+//   width: 600px;
+//   height: 100px;
+//   padding: 5px;
+// }
 
 // index
 

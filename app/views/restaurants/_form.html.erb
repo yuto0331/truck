@@ -11,29 +11,29 @@
     </div>
   <% end %>
 
-  <section class = "restaurant_input">
-   <table border = 2> 
-    <!--後でborderは消す-->
-   
-    <tr class="field">
-      <td><%= form.label :お店の外観 %></td>
-      <td><%= form.file_field :image, id: :restaurant_image %></td>
-      <td><%= form.hidden_field :image_cache %></td>
-    </tr>
-  
-    <tr class="field">
-      <td><%= form.label :お店の名前 %></td>
-      <td><%= form.text_field :name, id: :restaurant_name, :placeholder => "お店の名前は？..." %></td>
-    </tr>
-  
-    <tr class="field">
-      <td><%= form.label :　県名 %></td>
-      <td><%= form.text_field :place, id: :restaurant_place, :placeholder => "何県？..." %></td>
-    </tr>
-  
-    <tr class="actions">
-      <%= form.submit %>
-    </tr>
-  </table>
-  </section>
+  <div class="item_space">
+    <ul>
+      <li class="restaurant_new_input">
+        <%= form.label :→ %>
+        <%= form.file_field :image, id: :restaurant_image %>
+        <%= form.hidden_field :image_cache %>
+      </li>
+      
+      <li class="restaurant_new_input">
+        <%= form.label :お店の名前 %>
+        <%= form.text_field :name, id: :restaurant_name, :placeholder => "お店の名前は？..." %>
+      </li>
+      
+      <li class="restaurant_new_input">
+        <%= form.label :　県名 %>
+        <%= form.text_field :place, id: :restaurant_place, :placeholder => "何県？..." %></td>
+      </li>
+      
+      <li id="restaurant_ations">
+        <%= form.submit "投稿"%>
+      </li>
+      
+    </ul>  
+  </div>
+
 <% end %>

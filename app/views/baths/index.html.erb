@@ -1,7 +1,7 @@
 <section class = "bath_room fullheight">
 <p id="notice"><%= notice %></p>
 
-<h1 id="bath_index">お風呂情報</h1>
+<h1 id="bath_index">温泉情報</h1>
  <h2 id="bath_index_sub" >-写真をクリックして下さい-</h2>
 
     <% @baths.each do |bath| %>
@@ -16,7 +16,7 @@
 
 <br>
 <div>
-<%= link_to 'お風呂情報を投稿', new_bath_path, class:"origin_next_btn bath_index_new" %>
+<%= link_to '温泉情報を投稿', new_bath_path, class:"origin_next_btn bath_index_new" %>
 </div>
 
 </section>

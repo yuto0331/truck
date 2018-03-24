@@ -58,20 +58,47 @@
 // }
 
 
-
-
-
+//?????
+.bath_index_new {
+  margin: 0px 2500px 10px 250px;
+}
 
 
 //new
 
-.bath_index_new {
-  margin: 50px 250px 10px 250px;
+#bath_image {
+  margin: 20px;
 }
 
 #bath_new {
   text-align: center;
+  margin: 50px 0 100px 0;
 }
+
+.bath_new_input{
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.item_space {
+  margin: 100px 200px;
+}
+
+#bath_name {
+  height: 50px;
+  width: 350px;
+}
+
+#bath_content{
+  height: 80px;
+  width: 350px;
+}
+
+#bath_name {
+  height: 50px;
+  width: 350px;
+}
+
 
 // show
 .bath_show_image {

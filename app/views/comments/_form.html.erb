@@ -12,42 +12,34 @@
     </div>
   <% end %>
   
-  <section class = "restaurant_input">
-   <table border = 2> 
-    <!--<tr class="field">-->
-    <!--  <td><%#= form.label :restaurant_id %></td>-->
-    <!--  <td><%#= form.hidden_field :restaurant_id, :value => @restaurant.id %></td>-->
-    <!--</tr>-->
+
     
       <%= form.hidden_field :restaurant_id, :value => @restaurant.id %>
 
-   <tr class="field">
-      <td><%= form.label :menu %></td>
-      <td><%= form.text_field :menu, id: :comment_menu %></td>
-    </tr>
+  <div class="item_space">
+    <ul>
+      
+      <li class="comment_new_input">
+        <%= form.label :→ %>
+        <%= form.file_field :image, id: :comment_new_image %>
+        <%= form.hidden_field :image_cache %>
+      </li>
   
-    <tr class="field">
-      <td><%= form.label :comment %></td>
-      <td><%= form.text_field :comment, id: :comment_comment %></td>
-    </tr>
-  
-    <tr class="field">
-      <td><%= form.label :takeout %></td>
-      <td><%= form.text_field :takeout, id: :comment_takeout %></td>
-    </tr>
-  
-    <tr class="field">
-      <td><%= form.label :image %></td>
-      <td><%= form.file_field :image, id: :comment_image %></td>
-      <td><%= form.hidden_field :image_cache %></td>
-    </tr>
-  
-    <tr class="actions" >
-      <%= form.submit "作成"  %>
-      <%#= form.submit "作成", comments_path(restaurant_id: @current_restaurant_id), method: :post %>
-      <%#= binding.pry %>
-      <%#= link_to "", comments_path(@current_restaurant_id ), method: :post %>
-    </tr>
-  </table>
-  </section>
+      <li class="comment_new_input">
+        <%= form.text_field :menu, id: :comment_menu, :placeholder => "お風屋さんの名前..." %>
+      </li>
+      
+      <li class="comment_new_input">
+        <%= form.text_field :comment, id: :comment_comment, :placeholder => "行ってみた感想..." %>
+      </li>
+      
+      <li class="comment_new_input">
+        <%= form.text_field :takeout, id: :comment_takeout, :placeholder => "テイクアウトは出来そうですか？..." %>
+      </li>
+      
+    <li class="actions" >
+        <%= form.submit "投稿"  %>
+      </li>
+    </ul>
+  </div>
 <% end %>

@@ -83,6 +83,9 @@ h1 {
   clear: both;
 }
 
+li {
+  list-style: none;
+}
 
 /* header */
 
@@ -96,24 +99,26 @@ header {
 }
 
 header .header {
-  width: 820px;
+  width: 800px;
   margin: 0 auto;
-  height: 50px;
-  padding-top: 20px;
+  height: 80px;
+  padding-top: 0px;
   position: relative;
 }
 
 .header_logo {
   float: left;
   font-size: 30px;
-  padding: 25px 40px;
+  padding: 30px 40px;
   color: #fff;
 }
 
 .header_tag {
   color: #fff;
   font-size: 20px;
-  margin: 15px;
+  margin: 20px 10px ;
+  padding: 10px;
+  float: left
   
 }
 
@@ -141,6 +146,10 @@ header .header {
 }
 
 /* _form */
+
+.item_space {
+  margin: 100px 200px;
+}
 
 .input .field {
   font-size: 26px;
