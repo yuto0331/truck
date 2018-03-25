@@ -15,7 +15,7 @@
     <ul>
       <li class="restaurant_new_input">
         <%= form.label :→ %>
-        <%= form.file_field :image, id: :restaurant_image %>
+        <%= form.file_field :image, id: :restaurant_image, :alt => "/images/NO_IMAGE.jpg" %>
         <%= form.hidden_field :image_cache %>
       </li>
       

@@ -59,7 +59,7 @@ class RestaurantsController < ApplicationController
   def destroy
     @restaurant.destroy
     respond_to do |format|
-      format.html { redirect_to restaurants_path, notice: '投稿をさくじょしました' }
+      format.html { redirect_to restaurants_path, notice: '投稿を削除しました' }
       format.json { head :no_content }
     end
   end
