@@ -1,14 +1,30 @@
-<section class = "fullheight" >
-
-  <h1>ログイン</h1>
-  <h4>DriveStationにログインする</h4>
+<section class = "session_room" >
+  <h1 id="session_new">ログイン</h1>
+  <h4 id="session_sub">DriveStationにログインする</h4>
   <%= form_with(scope: :session, url: sessions_path) do |f| %>
-    <%= f.label :email %>
-    <%= f.email_field :email %>
-    
-    <%= f.label :password %>
-    <%= f.password_field :password %>
-    
-    <%= f.submit "Log in" %>
+
+    <section class="name_input">
+      <table class="input">
+        
+        <tr class="field">
+          <th><%= f.label :email %></th>
+          <td><%= f.email_field :email %></td>
+        </tr>
+        
+        <tr class="field">
+          <th><%= f.label :password %></th>
+          <td><%= f.password_field :password %></td>
+        </tr>
+        
+      </table>
+      <p>
+      <div class="actions">
+      <%= f.submit "送信>>", class: "action" %>
+      </div>
+      </p>
+      
+    </section>    
+  
   <% end %>
-</section>
+  
+</section>    
