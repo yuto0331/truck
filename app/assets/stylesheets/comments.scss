@@ -80,7 +80,7 @@
 
 #comment_new {
   text-align: center;
-  margin: 50px 0 100px 0;
+  margin: 50px 0 0px 0;
 }
 
 
@@ -94,7 +94,7 @@
 }
 
 #comment_comment{
-  height: 80px;
+  height: 120px;
   width: 350px;
 }
 
@@ -121,3 +121,9 @@
 //   height: 100px;
 //   padding: 5px;
 // }
+
+
+//show
+#comment_show_right{
+  margin: 50px 200px;
+}

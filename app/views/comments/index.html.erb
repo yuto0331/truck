@@ -21,8 +21,8 @@
     <% end %>
    </div>
    
+<%= link_to '食べたメニューを投稿', new_comment_path(restaurant_id: @restaurant.id), class:"origin_next_btn commnet_index_new" %>
 
 </section>
 
-<%= link_to '食べたメニューを投稿', new_comment_path(restaurant_id: @restaurant.id), class:"origin_next_btn commnet_index_new" %>
 <%= link_to '←', restaurants_path, class:"origin_back_btn" %>

@@ -1,6 +1,8 @@
-<h1>Editing Comment</h1>
+<section class = "comment_room fullheight" >
+  <h1 id="comment_index">食べたメニューを編集</h1>
+  
+  <%= render 'form', comment: @comment %>
+  
 
-<%= render 'form', comment: @comment %>
-
-<%= link_to 'Show', @comment %> |
-<%= link_to 'Back', comments_path(restaurant_id: @comment.restaurant.id) %>
+  <%= link_to '←', comments_path(restaurant_id: @comment.restaurant.id), class:"origin_back_btn" %>
+</section>

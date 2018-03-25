@@ -45,7 +45,7 @@ class BathsController < ApplicationController
   def update
     respond_to do |format|
       if @bath.update(bath_params)
-        format.html { redirect_to @bath, notice: 'Bath was successfully updated.' }
+        format.html { redirect_to @bath, notice: '編集しました' }
         format.json { render :show, status: :ok, location: @bath }
       else
         format.html { render :edit }
@@ -59,7 +59,7 @@ class BathsController < ApplicationController
   def destroy
     @bath.destroy
     respond_to do |format|
-      format.html { redirect_to baths_url, notice: 'Bath was successfully destroyed.' }
+      format.html { redirect_to baths_url, notice: '削除しました' }
       format.json { head :no_content }
     end
   end
