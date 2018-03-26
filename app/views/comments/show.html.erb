@@ -2,41 +2,41 @@
  <p id="notice"><%= notice %></p>
 
     <div id="comment_show_right">
-    <p>
-      <%= image_tag @comment.image, id:"comment_image" %>
-    </p>
-    
-    <p>
-      <strong>店名:</strong>
-      <%= @comment.restaurant_id %>
-    </p>
-    
-    <!--<p>-->
-    <!--  <strong>User:</strong>-->
-    <!--  <%#= @comment.user_id %>-->
-    <!--</p>-->
-    
-    <p>
-      <strong>食べたメニュー:</strong>
-      <%= @comment.menu %>
-    </p>
-    
-    <p>
-      <strong>Takeout:</strong>
-      <%= @comment.takeout %>
-    </p>
-    
-    <p>
-      <strong>クチコミ:</strong>
-      <%= @comment.comment %>
-    </p>
-    
-      <% if current_user.id == @comment.user_id %>
-        <%= link_to '編集', edit_comment_path(@comment), class:"origin_edit_btn" %>
-    　  <%= link_to '削除', comment_path(@comment), class:"origin_edit_btn", method: :delete, data: { confirm: '削除していいですか？' }  %>
-      <% end %>
+      <p id="comment_image_show">
+        <%= comment_image(@comment) %>
+      </p>
       
-    </div>  
+      <p>
+        <strong>店名:</strong>
+        <!--<%#= @comment.restaurant_id %>-->
+      </p>
+      
+      <!--<p>-->
+      <!--  <strong>User:</strong>-->
+      <!--  <%#= @comment.user_id %>-->
+      <!--</p>-->
+      
+      <p>
+        <strong>食べたメニュー:</strong>
+        <%= @comment.menu %>
+      </p>
+      
+      <p>
+        <strong>Takeout:</strong>
+        <%= @comment.takeout %>
+      </p>
+      
+      <p>
+        <strong>クチコミ:</strong>
+        <%= @comment.comment %>
+      </p>
+      
+        <% if current_user.id == @comment.user_id %>
+          <%= link_to '編集', edit_comment_path(@comment), class:"origin_edit_btn" %>
+          <%= link_to '削除', comment_path(@comment), class:"origin_edit_btn", method: :delete, data: { confirm: '削除していいですか？' }  %>
+        <% end %>
+        
+      </div>  
   
   <%= link_to '←', comments_path(restaurant_id: @comment.restaurant.id), class:"origin_back_btn" %>
 </section>

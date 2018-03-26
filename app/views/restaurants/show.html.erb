@@ -1,8 +1,9 @@
 <section class = "restaurant_room fullheight" >
   <p id="notice"><%= notice %></p>
   
-  <p>
-    <%= image_tag @restaurant.image, class: "restaurant_show_image" %>
+  <p class= "restaurant_show_image">
+    <%= restaurant_image(@restaurant) %>
+    <!--<%#= image_tag @restaurant.image %>-->
   </p>
 
    <div class="restaurant_contailner clearfix"> 

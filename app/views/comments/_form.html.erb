@@ -1,17 +1,18 @@
 
 <%= form_with(model: comment, local: true) do |form| %>
-  <% if comment.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(comment.errors.count, "error") %> prohibited this comment from being saved:</h2>
-
-      <ul>
-      <% comment.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+  <div class = "error_comment">
+    <% if comment.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(comment.errors.count, "件のエラー") %> が発生しました</h2>
   
+        <ul>
+        <% comment.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+  </div>
 
     
       <%= form.hidden_field :restaurant_id, :value => @restaurant.id %>
@@ -42,7 +43,7 @@
       </p>
       
       
-    <li class="actions" >
+      <li class="actions" >
         <%= form.submit "投稿"  %>
       </li>
     </ul>

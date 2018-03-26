@@ -6,7 +6,9 @@
 
     <% @baths.each do |bath| %>
      <div class="bath clearfix">
-        <%= link_to image_tag(bath.image, class: "bath_image"), bath %>
+      <div class= "bath_image">
+        <%= link_to bath_image(bath), bath %>
+      </div>
            <div class="index_content">
             <h3>県名：<%= bath.place %></h3> 
             <h3>店名：<%= link_to bath.name, bath, class: "bath_name" %></h3>

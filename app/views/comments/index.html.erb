@@ -2,20 +2,27 @@
 <p id="notice"><%= notice %></p>
 
 <h1 id="comment_index">皆の食べたもの</h1>
- 
+ <h2 id="comment_index_sub" >-写真をクリックして下さい-</h2>
    <div class="comment_contailner clearfix"> 
     <% @comments.each do |comment| %>
   
         <% if @restaurant.id == comment.restaurant_id  %>
-        <div class="comment">
-        <%= link_to image_tag(comment.image, :size =>'150x150', class: "img01 waku03 shadow rotate01"), comment_path(comment) %>
-        <br><%= comment.menu %>
-        <!--<br><%= comment.comment %>-->
-        <!--<br><%= comment.takeout %>-->
-        </div>
-        <!--<td><%#= link_to 'Show', comment_path(comment) %></td>-->
-        <!--<td><%#= link_to 'Edit', edit_comment_path(comment) %></td>-->
-        <!--<td><%#= link_to 'Destroy', comment_path(comment), method: :delete, data: { confirm: 'Are you sure?' } %></td>-->
+          <div class="comment">
+            <%= link_to comment_path(comment) do %> 
+            <div  class= "img01 waku03 shadow rotate01">
+            
+              <%= comment_image(comment)%>
+              <!--<%#= link_to image_tag(comment.image, :size =>'150x150'), comment_path(comment) %>-->
+          
+            </div>
+            <br><%= comment.menu %>
+            <!--<br><%#= comment.comment %>-->
+            <!--<br><%#= comment.takeout %>-->
+            <% end %>
+          </div>
+          <!--<td><%#= link_to 'Show', comment_path(comment) %></td>-->
+          <!--<td><%#= link_to 'Edit', edit_comment_path(comment) %></td>-->
+          <!--<td><%#= link_to 'Destroy', comment_path(comment), method: :delete, data: { confirm: 'Are you sure?' } %></td>-->
         <% end %>
      
     <% end %>

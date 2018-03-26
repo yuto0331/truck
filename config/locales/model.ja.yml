@@ -1,0 +1,30 @@
+ja:
+  activerecord:
+    models:
+      bath: "温泉"
+      comment: "コメント"
+      restaurant: "食事処"
+      user: "ユーザー"
+    attributes:
+      bath:
+        image: "画像"
+        place: "場所"
+        name: "名前"
+        content: "コメント"
+      comment:
+        image: "画像"
+        menu: "メニュー"
+        takeout: "テイクアウト"
+        comment: "コメント"
+      restaurant:
+        image: "画像"
+        name: "名前"
+        place: "地域"
+      user:
+        name: "名前"
+        email: "メールアドレス"
+        image: "画像"
+        current_password: "現在のパスワード"
+        password: "パスワード"
+        password_confirmation: "確認用パスワード"
+        remember_me: "ログインを記憶"

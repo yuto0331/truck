@@ -1,15 +1,17 @@
 <%= form_with(model: restaurant, local: true) do |form| %>
-  <% if restaurant.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(restaurant.errors.count, "error") %> prohibited this restaurant from being saved:</h2>
-
-      <ul>
-      <% restaurant.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+  <div class = "error_comment">
+    <% if restaurant.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(restaurant.errors.count, "件のエラー") %>が発生しました</h2>
+  
+        <ul>
+        <% restaurant.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+  </div>
 
   <div class="item_space">
     <ul>

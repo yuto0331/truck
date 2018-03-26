@@ -31,15 +31,14 @@ class CommentsController < ApplicationController
     
   end
 
-  # POST /comments
-  # POST /comments.json
+
   def create
     @comment = current_user.comments.build(comment_params)
     @restaurant = @comment.restaurant
     @comment.restaurant_id= @restaurant.id
-    
   
       if @comment.save
+        
         redirect_to comments_path(restaurant_id: @restaurant.id), notice: '食べたメニューを投稿しました' 
       else
         render :new

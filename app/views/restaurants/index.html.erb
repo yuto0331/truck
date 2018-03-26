@@ -6,7 +6,12 @@
 
     <% @restaurants.each do |restaurant| %>
         <div class="restaurant clearfix">
-        <%= link_to image_tag(restaurant.image, class: "restaurant_image"), restaurant %>
+          
+        <p class="restaurant_image">
+            <%= link_to restaurant_image(restaurant), restaurant %>
+        </p>
+        
+        <!--<%#= link_to image_tag(restaurant.image, class: "restaurant_image"), restaurant %>-->
            <div class="index_content">
             <h3>県名：<%= restaurant.place %></h3> 
             <h3>店名：<%= link_to restaurant.name, restaurant, class: "restaurant_name" %></h3>

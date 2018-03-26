@@ -80,7 +80,7 @@
  margin: 0 0 100px 0;
 }
 
-.restaurant .restaurant_image {
+.restaurant .restaurant_image img{
   border-radius: 50%;
   float:left;
   width: 100px;
@@ -125,7 +125,7 @@ text-align: left;
 
 
 // show
-.restaurant_show_image {
+.restaurant_show_image img{
   width: 600px;
   height: 500px;
   margin: 0 80px;
@@ -184,4 +184,6 @@ text-align: left;
 }
 
 
-
+.index_image img{
+  width: 50px;
+}
