@@ -1,24 +1,11 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+このアプリはトラックの運転手の為のアプリです。
+温泉処と食事処をトラックの運転手自身が投稿し、その情報を共有するツールです。
 
-Things you may want to cover:
+温泉処は行った各温泉の情報を投稿します。
+食事処は各お店のメニューを投稿します。
 
-* Ruby version
+利用するにはログインが必要です。
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+気になる他人の情報にはお気に入り登録をし、マイページに表示することが出来ます。
