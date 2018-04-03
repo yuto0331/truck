@@ -24,10 +24,8 @@ class RestaurantsController < ApplicationController
     respond_to do |format|
       if @restaurant.save
         format.html { redirect_to @restaurant, notice: 'レストラン情報を新しく投稿しました' }
-        format.json { render :show, status: :created, location: @restaurant }
       else
         format.html { render :new }
-        format.json { render json: @restaurant.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -36,10 +34,8 @@ class RestaurantsController < ApplicationController
     respond_to do |format|
       if @restaurant.update(restaurant_params)
         format.html { redirect_to @restaurant, notice: '編集しました' }
-        format.json { render :show, status: :ok, location: @restaurant }
       else
         format.html { render :edit }
-        format.json { render json: @restaurant.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -48,7 +44,6 @@ class RestaurantsController < ApplicationController
     @restaurant.destroy
     respond_to do |format|
       format.html { redirect_to restaurants_path, notice: '投稿を削除しました' }
-      format.json { head :no_content }
     end
   end
 

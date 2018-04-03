@@ -24,10 +24,8 @@ class BathsController < ApplicationController
     respond_to do |format|
       if @bath.save
         format.html { redirect_to @bath, notice: 'お風呂情報が投稿されました' }
-        format.json { render :show, status: :created, location: @bath }
       else
         format.html { render :new }
-        format.json { render json: @bath.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -36,10 +34,8 @@ class BathsController < ApplicationController
     respond_to do |format|
       if @bath.update(bath_params)
         format.html { redirect_to @bath, notice: '編集しました' }
-        format.json { render :show, status: :ok, location: @bath }
       else
         format.html { render :edit }
-        format.json { render json: @bath.errors, status: :unprocessable_entity }
       end
     end
   end
