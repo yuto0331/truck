@@ -1,36 +1,36 @@
 <section class = "bath_room" >
-<p id="notice"><%= notice %></p>
-
-<p class="bath_show_image" >
-  <%= bath_image(@bath) %>
-</p>
-
-<div class="bath_show_content">
-  <p>
-    <strong>地域:</strong>
-    <%= @bath.place %>
+  <p id="notice"><%= notice %></p>
+  
+  <p class="bath_show_image" >
+    <%= bath_image(@bath) %>
   </p>
-  <p>
-    <strong>コメント:</strong>
-    <%= @bath.content %>
-  </p>
-</div>
-
-<div class ="bath_show">
-  <p class = "bath_show_preference">
-  <% unless @bath.user == current_user %>
-    <% if @preference.present? %>
-      <%= link_to 'お気に入り解除', preference_path(bath_id: @bath.id), method: :delete, class: 'restaurant_show_favorote' %>
-    <% else %>
-      <%= link_to 'お気に入り登録', preferences_path(bath_id: @bath.id), method: :post, class: 'restaurant_show_favorote' %>
+  
+  <div class="bath_show_content">
+    <p>
+      <strong>地域:</strong>
+      <%= @bath.place %>
+    </p>
+    <p>
+      <strong>コメント:</strong>
+      <%= @bath.content %>
+    </p>
+  </div>
+  
+  <div class ="bath_show">
+    <p class = "bath_show_preference">
+    <% unless @bath.user == current_user %>
+      <% if @preference.present? %>
+        <%= link_to 'お気に入り解除', preference_path(bath_id: @bath.id), method: :delete, class: 'restaurant_show_favorote' %>
+      <% else %>
+        <%= link_to 'お気に入り登録', preferences_path(bath_id: @bath.id), method: :post, class: 'restaurant_show_favorote' %>
+      <% end %>
     <% end %>
-  <% end %>
-  <% if current_user.id == @bath.user_id %>
-    <%= link_to '編集', edit_bath_path(@bath), class:"origin_edit_btn" %>
-  　<%= link_to '削除', bath_path(@bath), class:"origin_edit_btn", method: :delete, data: { confirm: '削除していいですか？' }  %>
-  <% end %>
-  </p>
-</div>
+    <% if current_user.id == @bath.user_id %>
+      <%= link_to '編集', edit_bath_path(@bath), class:"origin_edit_btn" %>
+    　<%= link_to '削除', bath_path(@bath), class:"origin_edit_btn", method: :delete, data: { confirm: '削除していいですか？' }  %>
+    <% end %>
+    </p>
+  </div>
 </section>
 
 <%= link_to '←', baths_path, class:"origin_back_btn"  %>

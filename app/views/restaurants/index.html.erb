@@ -1,33 +1,28 @@
 <section class = "restaurant_room fullheight">
-<p id="notice"><%= notice %></p>
-
-<h1 id="restaurant_index" >食事処一覧</h1>
- <h2 id="restaurant_index_sub" >-写真をクリックして下さい-</h2>
-
-    <% @restaurants.each do |restaurant| %>
-        <div class="restaurant clearfix">
+  <p id="notice"><%= notice %></p>
+  
+  <h1 id="restaurant_index" >食事処一覧</h1>
+   <h2 id="restaurant_index_sub" >-写真をクリックして下さい-</h2>
+  
+      <% @restaurants.each do |restaurant| %>
+          <div class="restaurant clearfix">
+            
+          <p class="restaurant_image">
+              <%= link_to restaurant_image(restaurant), restaurant %>
+          </p>
           
-        <p class="restaurant_image">
-            <%= link_to restaurant_image(restaurant), restaurant %>
-        </p>
-        
-        <!--<%#= link_to image_tag(restaurant.image, class: "restaurant_image"), restaurant %>-->
-           <div class="index_content">
-            <h3>県名：<%= restaurant.place %></h3> 
-            <h3>店名：<%= link_to restaurant.name, restaurant, class: "restaurant_name" %></h3>
-           </div>
-        </div>  
-    <% end %>
-    
- 
-
-<br>
-<div>
-<%= link_to '食事処を投稿', new_restaurant_path, class:"origin_next_btn restaurant_index_new" %>
-</div>
-
+          <!--<%#= link_to image_tag(restaurant.image, class: "restaurant_image"), restaurant %>-->
+             <div class="index_content">
+              <h3>県名：<%= restaurant.place %></h3> 
+              <h3>店名：<%= link_to restaurant.name, restaurant, class: "restaurant_name" %></h3>
+             </div>
+          </div>  
+      <% end %>
+  <br>
+  <div>
+    <%= link_to '食事処を投稿', new_restaurant_path, class:"origin_next_btn restaurant_index_new" %>
+  </div>
 </section>
-
 <div>
 <%= link_to '←', user_path(id: current_user.id), class:"origin_back_btn" %>
 </div>
