@@ -61,7 +61,7 @@ class BathsController < ApplicationController
     def current_user_login
      unless  current_user
       flash[:referer] = 'ログインしてください'
-      render new_session_path     # redirect_to new_session_path          render? redirect?
+      redirect_to new_session_path 
      end
     end
 end
