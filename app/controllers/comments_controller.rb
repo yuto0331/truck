@@ -26,7 +26,6 @@ class CommentsController < ApplicationController
     @comment.restaurant_id= @restaurant.id
   
       if @comment.save
-        
         redirect_to comments_path(restaurant_id: @restaurant.id), notice: '食べたメニューを投稿しました' 
       else
         render :new
@@ -38,10 +37,8 @@ class CommentsController < ApplicationController
     respond_to do |format|
       if @comment.update(comment_params)
         format.html { redirect_to @comment, notice: '編集しました' }
-        format.json { render :show, status: :ok, location: @comment }
       else
         format.html { render :edit }
-        format.json { render json: @comment.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -50,7 +47,6 @@ class CommentsController < ApplicationController
     @comment.destroy
     respond_to do |format|
       format.html { redirect_to comments_path(restaurant_id: @comment.restaurant.id), notice: 'メニューを削除しました' }
-      format.json { head :no_content }
     end
   end
 

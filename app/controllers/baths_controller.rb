@@ -21,10 +21,7 @@ class BathsController < ApplicationController
     # @bath = Bath.new(bath_params)
     # @bath.user_id = current_user.id 
     # 下記一行
-    
     @bath = current_user.baths.build(bath_params)
-    binding.pry
-    
 
     respond_to do |format|
       if @bath.save
@@ -49,7 +46,6 @@ class BathsController < ApplicationController
     @bath.destroy
     respond_to do |format|
       format.html { redirect_to baths_url, notice: '削除しました' }
-      format.json { head :no_content }
     end
   end
 
