@@ -16,7 +16,6 @@ class CommentsController < ApplicationController
 
   def edit
     @restaurant = @comment.restaurant
-    
   end
 
 
