@@ -18,8 +18,13 @@ class BathsController < ApplicationController
   end
 
   def create
-    @bath = Bath.new(bath_params)
-    @bath.user_id = current_user.id
+    # @bath = Bath.new(bath_params)
+    # @bath.user_id = current_user.id 
+    # 下記一行
+    
+    @bath = current_user.baths.build(bath_params)
+    binding.pry
+    
 
     respond_to do |format|
       if @bath.save
