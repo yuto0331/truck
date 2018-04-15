@@ -3,11 +3,9 @@
   
   <p class= "restaurant_show_image">
     <%= restaurant_image(@restaurant) %>
-    <!--<%#= image_tag @restaurant.image %>-->
   </p>
 
    <div class="restaurant_contailner clearfix"> 
-    <!--<div class="restaurant_show_name">-->
       <p>
         <strong>店名</strong>
         <%= @restaurant.name %>
@@ -38,5 +36,8 @@
         <%= link_to '←', restaurants_path, class:"origin_back_btn" %>
       </div>
   </div>
-      <%= link_to '皆の食べたものを見る', comments_path(restaurant_id: @restaurant.id), class:"origin_next_btn center_btn" %> 
+  
+  <div class = "button_wrapper_center">
+    <%= link_to '皆の食べたものを見る', comments_path(restaurant_id: @restaurant.id), class:"origin_next_btn center_btn" %> 
+  </div>  
 </section>

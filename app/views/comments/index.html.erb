@@ -10,26 +10,18 @@
           <div class="comment">
             <%= link_to comment_path(comment) do %> 
             <div  class= "img01 waku03 shadow rotate01">
-            
               <%= comment_image(comment)%>
-              <!--<%#= link_to image_tag(comment.image, :size =>'150x150'), comment_path(comment) %>-->
-          
             </div>
             <br><%= comment.menu %>
-            <!--<br><%#= comment.comment %>-->
-            <!--<br><%#= comment.takeout %>-->
             <% end %>
           </div>
-          <!--<td><%#= link_to 'Show', comment_path(comment) %></td>-->
-          <!--<td><%#= link_to 'Edit', edit_comment_path(comment) %></td>-->
-          <!--<td><%#= link_to 'Destroy', comment_path(comment), method: :delete, data: { confirm: 'Are you sure?' } %></td>-->
         <% end %>
-     
     <% end %>
    </div>
    
-<%= link_to '食べたメニューを投稿', new_comment_path(restaurant_id: @restaurant.id), class:"origin_next_btn commnet_index_new" %>
-
+  <div class = "button_wrapper_center">
+   <%= link_to '食べたメニューを投稿', new_comment_path(restaurant_id: @restaurant.id), class:"origin_next_btn commnet_index_new" %>
+  </div>
 </section>
 
 <%= link_to '←', restaurants_path, class:"origin_back_btn" %>

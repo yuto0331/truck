@@ -16,8 +16,9 @@
   
   
   <section class = "bath_preferences_index">
+    <div class="col-md-3">
     <%= link_to '温泉を探す', baths_path, class: "origin_next_btn user_show_bath_index" %>
-    
+    </div>
       <div class="preference">
         <% @user.preference_baths.each do |bath| %>
           <table>
@@ -31,8 +32,9 @@
     </section>
 
   <section class = "restaurant_favorites_index">
+    <div class="col-md-3">
     <%= link_to '食事処を探す', restaurants_path, class: "origin_next_btn user_show_restaurant_index" %>
-  
+    </div>
       <div class="favorites">
         <% @user.favorite_restaurants.each do |restaurant| %>
           <table>

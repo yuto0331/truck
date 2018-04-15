@@ -45,13 +45,13 @@ body {
 
 body {
   /*最後に798→800*/
-    width : 800px;
-    margin: 50px auto;
+    width : grid-template-columns 10% 80% 10% ;
+    margin: 5px auto;
     font-size :14px;
     font-family: 'Avenir','Helvetica Neue','Helvetica','Arial','Hiragino Sans','ヒラギノ角ゴシック',YuGothic,'Yu Gothic','メイリオ', Meiryo,'ＭＳ Ｐゴシック','MS PGothic';
     /*background: #f8f8f8;*/
    
-    padding: 50px 80px;  
+    padding: 10px 80px;  
     background-color: #fff;
     
     /*最後に消す 消すときにwidthを800pxにする*/
@@ -224,7 +224,7 @@ li {
   margin: 0;
   /*position: absolute;*/
   bottom: 0;
-  width: 800px;
+  
   
 }
 
@@ -311,4 +311,8 @@ li {
 
 .origin_edit_btn:hover {
     background: #b3e1ff;
+}
+
+.button_wrapper_center {
+  text-align:center;
 }
