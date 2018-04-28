@@ -33,7 +33,7 @@
 // show
 #mypage {
   margin: 0 0 50px 100px;
-  padding: 50px;
+  padding: 50px 200px;
 }
 
 #user_image img {
@@ -54,11 +54,11 @@
 
 .bath_preferences_index {
   float:left;
-  width: 400px;
+  width: 450px;
 }
 
 .user_show_bath_index{
-  margin: 0 50px;
+  margin: 0 200px;
   display: block;
 }
 
@@ -73,9 +73,9 @@
   float: left;
   width: 320px;
   // height: 500px;
-  margin: 0;
+  margin: 0 0 0 100px;
   // overflow: scroll;
-  padding: 0 0 0 80px;
+  padding: 0 0 0 100px;
 }
 
 
@@ -83,12 +83,11 @@
 
 .restaurant_favorites_index {
   float: left;
-  width: 338px;
-
+  width: 500px;
 }
 
 .user_show_restaurant_index{
-  margin: 0 50px;
+  margin: 0 200px;
   display: block;
 }
 
@@ -104,8 +103,8 @@
 .favorites {
   float: left;
   width: 320px;
-  // height: 500px;
-  margin: 0;
+  margin: 0 0 0 100px;
+
   // overflow: scroll;
   padding: 0 80px;
 }
