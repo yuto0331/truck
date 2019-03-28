@@ -1,11 +1,11 @@
 <section class = "restaurant_room fullheight" >
   <p id="notice"><%= notice %></p>
-  
+
   <p class= "restaurant_show_image">
     <%= restaurant_image(@restaurant) %>
   </p>
 
-   <div class="restaurant_contailner clearfix"> 
+   <div class="restaurant_contailner clearfix">
       <p>
         <strong>店名</strong>
         <%= @restaurant.name %>
@@ -27,7 +27,7 @@
       <% end %>
     <% end %>
     </div>
-    
+
       <div>
         <% if current_user.id == @restaurant.user_id %>
           <P><%= link_to '編集', edit_restaurant_path(@restaurant), class:"origin_edit_btn" %></P>
@@ -36,8 +36,8 @@
         <%= link_to '←', restaurants_path, class:"origin_back_btn" %>
       </div>
   </div>
-  
+
   <div class = "button_wrapper_center">
-    <%= link_to '皆の食べたものを見る', comments_path(restaurant_id: @restaurant.id), class:"origin_next_btn center_btn" %> 
-  </div>  
+    <%= link_to 'このお店で食べたもの', comments_path(restaurant_id: @restaurant.id), class:"origin_next_btn center_btn" %> 
+  </div>
 </section>
