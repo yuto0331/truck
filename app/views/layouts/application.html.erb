@@ -4,6 +4,7 @@
     <title>Dorasute</title>
     <%= csrf_meta_tags %>
 
+    <meta name="viewport" content="width=device-width">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -17,22 +18,39 @@
     <!--上記はフラッシュメッセージがあった場合の表示用 ログインシステム10-->
 
     <header class="header clearfix">
-      <ul>
-        <li><%= link_to 'DriveStation', root_url, class: "header_logo" %></li>
-      </ul>
-      
-      <ul>
-        <% if logged_in? %>
-          <li><%= link_to "お気に入り", user_path(current_user.id), class: "header_tag" %></li>
-          <li><%= link_to '食事処一覧', restaurants_path, class: "header_tag" %></li>
-          <li><%= link_to '温泉一覧', baths_path, class: "header_tag" %></li>
-          <li><%= link_to "ログアウト", session_path(current_user.id), method: :delete, class: "header_tag" %></li>
-        <% else %>
-          <li><%= link_to "新規登録", new_user_path, class: "header_tag" %></li>
-          <li><%= link_to "ログイン", new_session_path, class: "header_tag" %></li>
-        <% end %>
-      </ul>
+      <!-- <ul>
+        <li><%#= link_to 'DriveStation', root_url, class: "header_logo" %></li>
+      </ul> -->
 
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#gnavi">
+              <span class="sr-only">Drive</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"><%= link_to 'DriveStation', root_url, class: "header_logo" %></a>
+            </div>
+
+            <div id="gnavi" class="collapse navbar-collapse">
+
+            <ul class="nav navbar-nav">
+              <% if logged_in? %>
+                <li><a><%= link_to "お気に入り", user_path(current_user.id), class: "header_tag" %></a></li>
+                <li><a><%= link_to '食事処一覧', restaurants_path, class: "header_tag" %></a></li>
+                <li><a><%= link_to '温泉一覧', baths_path, class: "header_tag" %></a></li>
+                <li><a><%= link_to "ログアウト", session_path(current_user.id), method: :delete, class: "header_tag" %></a></li>
+              <% else %>
+                <li><%= link_to "新規登録", new_user_path, class: "header_tag" %></li>
+                <li><%= link_to "ログイン", new_session_path, class: "header_tag" %></li>
+              <% end %>
+            </ul>
+
+          </div>
+        </div>
+      </nav>
     </header>
 
     <%= yield %>
