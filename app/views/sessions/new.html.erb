@@ -5,26 +5,22 @@
 
     <section class="name_input">
       <table class="input">
-        
         <tr class="field">
           <th><%= f.label :email %></th>
           <td><%= f.email_field :email %></td>
         </tr>
-        
+
         <tr class="field">
           <th><%= f.label :password %></th>
           <td><%= f.password_field :password %></td>
         </tr>
-        
       </table>
-      <p>
+
       <div class="actions">
       <%= f.submit "送信>>", class: "action" %>
       </div>
-      </p>
-      
-    </section>    
-  
+    </section>
+
   <% end %>
-  
-</section>    
+
+</section>

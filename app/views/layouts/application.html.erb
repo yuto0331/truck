@@ -9,18 +9,18 @@
   </head>
 
   <body>
-    <div class="container">
-    
+   <div class="container">
+
     <!--<%# flash.each do |key, value| %>             -->
     <!--  <%#= content_tag(:div, value, class: "#{key}") %>-->
     <!--<%# end %>-->
     <!--上記はフラッシュメッセージがあった場合の表示用 ログインシステム10-->
-    
+
     <header class="header clearfix">
       <ul>
         <li><%= link_to 'DriveStation', root_url, class: "header_logo" %></li>
-        <!--クラスを当てると飛ばなくなる.後で確認-->
       </ul>
+      
       <ul>
         <% if logged_in? %>
           <li><%= link_to "お気に入り", user_path(current_user.id), class: "header_tag" %></li>
@@ -31,17 +31,17 @@
           <li><%= link_to "新規登録", new_user_path, class: "header_tag" %></li>
           <li><%= link_to "ログイン", new_session_path, class: "header_tag" %></li>
         <% end %>
-      </ul>  
-    
+      </ul>
+
     </header>
-    
+
     <%= yield %>
-    
-      <footer class="footer">
-        <p>DIC 2017年10月期 </p>
-      </footer>
-    
-     </div>
+
+    <footer class="footer">
+      <p>Copyright &copy; <span>　Drive　</span>All Right Reserved.</p>
+    </footer>
+
+   </div>
   </body>
-  
+
 </html>

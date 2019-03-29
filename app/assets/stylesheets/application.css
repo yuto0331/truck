@@ -35,8 +35,7 @@ body {
   position: relative;
   min-height: 100%;
   width: auto;
-  /*background: #f8f8f8;*/
-  
+  background-color: #F8F8F8;
 }
 
 
@@ -46,18 +45,18 @@ body {
 body {
   /*最後に798→800*/
     width : grid-template-columns 10% 80% 10% ;
-    margin: 5px auto;
+    margin: 0px auto;
     font-size :14px;
     font-family: 'Avenir','Helvetica Neue','Helvetica','Arial','Hiragino Sans','ヒラギノ角ゴシック',YuGothic,'Yu Gothic','メイリオ', Meiryo,'ＭＳ Ｐゴシック','MS PGothic';
     /*background: #f8f8f8;*/
-   
-    padding: 10px 80px;  
-    background-color: #fff;
-    
+    padding: 0px 80px;
+
     /*最後に消す 消すときにwidthを800pxにする*/
      /*border: #f6bb9e 1px solid;*/
 }
-
+ul{
+  margin:0;
+}
 a {
   text-decoration: none;
 }
@@ -67,7 +66,9 @@ p{
 }
 
 section{
-  padding: 10px 0 180px 0;
+  width: 100%;
+  height: auto;
+  padding: 0px;
 }
 
 
@@ -112,7 +113,7 @@ li {
 .header_logo {
   float: left;
   font-size: 30px;
-  padding: 30px 10px;
+  padding: 24px 10px;
   color: #fff;
 }
 
@@ -122,42 +123,44 @@ li {
   margin: 20px 10px ;
   padding: 10px;
   float: left
-  
-}
-
-/*top*/
-
-.top_btn{
-  /*margin: 50px 250px 10px 250px;*/
-  margin: auto;
-}
-
-.center_btn{
-  text-align:center;
-  margin: 150px 0;
-}
-
-.top_content{
-  margin: 100px 0 0 100px;
-}
-
-#top_logo {
-  position: absolute;
-  background-image: url("douro.jpg");
-  background-size: cover;
-  height: auto;
-  width: 100%;
-  float: left;
-}
-
-.top_room {
-  height: 100%;
 }
 .clearfix:after {
   content: "";
   display: block;
   clear: both;
 }
+/*top*/
+
+.top_btn{
+  /*margin: 50px 250px 10px 250px;*/
+  margin: auto;
+}
+.center_btn{
+  text-align:center;
+  margin: 10% 0;
+  clear: both;
+}
+.top_content{
+  margin: 0 0 0 100px;
+}
+.top_content h2{
+  padding-top: 13%;
+}
+.top_img img{
+  width: 30%;
+  float: left;
+}
+
+
+.top_page{
+  /* background-image: url("douro.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100%; */
+}
+
+
 
 /* _form */
 
@@ -214,10 +217,9 @@ li {
   background-color: #99CCCC;
   height: 50px;
   margin: 0;
-  /*position: absolute;*/
+  position: absolute;
   bottom: 0;
-  
-  
+  width: 100%;
 }
 
 /*btn*/
@@ -238,7 +240,7 @@ li {
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
     border-bottom: solid 3px #bd6565;
     transition: .4s;
-    
+
     position: fixed;
     bottom: 10px;
     left: 220px;
@@ -257,7 +259,7 @@ li {
     display: inline-block;
     text-decoration: none;
     color: #C0C0C0;
-    
+
     width: 300px;
     height: 60px;
     line-height: 60px;
